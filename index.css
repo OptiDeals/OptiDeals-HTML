@@ -56,11 +56,13 @@
 }
 .home-desktop-menu {
   flex: 1;
+  width: auto;
   display: flex;
   justify-content: space-between;
 }
 .home-links {
   flex: 1;
+  width: auto;
   display: flex;
   align-items: center;
   flex-direction: row;
