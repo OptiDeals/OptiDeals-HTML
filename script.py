@@ -1,7 +1,7 @@
 import csv
 import openai
 from openai import OpenAI
-openai.api_key = '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'
+OPENAI_API_KEY = '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'
 
 client = OpenAI()
 
