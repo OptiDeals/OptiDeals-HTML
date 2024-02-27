@@ -1,14 +1,27 @@
 import csv
 import openai
-
+from openai import OpenAI
 openai.api_key = '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'
 
-response = openai.ChatCompletion.create(
+client = OpenAI()
+
+response = client.chat.completions.create(
   model="gpt-3.5-turbo",
   messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Translate these English words to French: ['hello', 'world']"},
-    ]
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Translate these English words to French: ['hello', 'world']"
+    }
+  ],
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
 )
 
 # Assuming the response contains a list of translations
