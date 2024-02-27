@@ -1,9 +1,9 @@
 import csv
 import openai
 from openai import OpenAI
-API_KEY = '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'
+import os
 
-client = OpenAI(api_key = API_KEY)
+client = OpenAI(api_key = os.getenv('OPENAI_API_KEY')))
 
 
 response = client.chat.completions.create(
