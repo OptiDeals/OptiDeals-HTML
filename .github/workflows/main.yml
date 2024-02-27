@@ -22,6 +22,8 @@ jobs:
         pip install openai
 
     - name: Run script
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: python api/script.py
 
     - name: Upload CSV
