@@ -1,4 +1,4 @@
-name: Run OpenAI Script and Save CSV
+name: OpenAI Script
 
 on:
   workflow_dispatch:
