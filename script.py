@@ -3,14 +3,16 @@ import openai
 
 openai.api_key = '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'
 
-response = openai.Completion.create(
-  engine="text-davinci-002",
-  prompt="Translate these English words to French: ['hello', 'world']",
-  max_tokens=60
+response = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Translate these English words to French: ['hello', 'world']"},
+    ]
 )
 
 # Assuming the response contains a list of translations
-translations = response.choices[0].text.strip().split(', ')
+translations = response['choices'][0]['message']['content'].strip().split(', ')
 
 # Write the data to a CSV file
 with open('translations.csv', 'w', newline='') as file:
