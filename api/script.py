@@ -2,7 +2,7 @@ import csv
 import openai
 from openai import OpenAI
 import os
-print(os.getenv('OPENAI_API_KEY))
+print(os.getenv('OPENAI_API_KEY'))
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 
