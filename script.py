@@ -1,9 +1,10 @@
 import csv
 import openai
 from openai import OpenAI
-OPENAI_API_KEY = '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'
+API_KEY = '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'
 
-client = OpenAI()
+client = OpenAI(api_key = API_KEY)
+
 
 response = client.chat.completions.create(
   model="gpt-3.5-turbo",
