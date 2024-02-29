@@ -1,0 +1,57 @@
+
+.recipe-container {
+  border:solid;
+  width: 100%;
+  height: 576px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.recipe-header{
+  display: flex;
+  flex:initial;
+  height: 3em;
+  border-bottom: solid;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-span{
+  flex:initial;
+  padding: 0 35px 0 35px;
+}
+
+.recipe-calendar{
+  display:flex;
+  flex: 1;
+  justify-items: space-evenly;
+  align-items: stretch;
+
+}
+
+[class^="calendar-day"]{
+  display:flex;
+  flex:auto;
+
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+[class^="calendar-day"]+[class^="calendar-day"]{
+  border-left:solid;
+}
+
+[class^="calendar-day"] > span{
+  padding-top: 16px;
+  
+}
+
+
+.recipe-footer{
+  flex:initial;
+  height: 3em;
+  text-align: center;
+  border-top: solid;
+}
