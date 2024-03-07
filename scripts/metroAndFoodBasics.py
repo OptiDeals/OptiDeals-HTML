@@ -6,6 +6,22 @@ import time
 def scrape_products(base_url, csv_file_path):
     product_data = []
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    # Check if the website is reachable
+    try:
+        response = requests.get(base_url.format(page=1), headers=headers)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as err:
+        print ("Error: ",err)
+        return
+    except requests.exceptions.HTTPError as errh:
+        print ("HTTP Error:",errh)
+        return
+    except requests.exceptions.ConnectionError as errc:
+        print ("Error Connecting:",errc)
+        return
+    except requests.exceptions.Timeout as errt:
+        print ("Timeout Error:",errt)
+        return
     # Get the first page to find the last page number
     response = requests.get(base_url.format(page=1),headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
