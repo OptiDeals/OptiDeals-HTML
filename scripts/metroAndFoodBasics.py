@@ -14,7 +14,7 @@ def scrape_products(base_url, csv_file_path):
         last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
     else:
         print("Pagination not found. Please check the website structure.")
-        return
+        last_page_number = 15
     print(f"Found {last_page_number} pages of products.")
     # Loop through each page until the last page
     for page_number in range(1, last_page_number + 1):
