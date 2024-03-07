@@ -1,6 +1,7 @@
 name: Weekly Python Scraper
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 7 * * 4"  # Run every Thursday at 7 AM (UTC)
 
