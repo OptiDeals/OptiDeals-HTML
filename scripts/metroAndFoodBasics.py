@@ -10,7 +10,11 @@ def scrape_products(base_url, csv_file_path):
     response = requests.get(base_url.format(page=1))
     soup = BeautifulSoup(response.content, 'html.parser')
     pagination = soup.find('div', class_='ppn--pagination')
-    last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
+    if pagination is not None:
+        last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
+    else:
+        print("Pagination not found. Please check the website structure.")
+        return
     print(f"Found {last_page_number} pages of products.")
     # Loop through each page until the last page
     for page_number in range(1, last_page_number + 1):
@@ -58,6 +62,6 @@ def scrape_products(base_url, csv_file_path):
 
 # Call the function with the URLs and output files
 print("Scraping Food Basics...")
-scrape_products("https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true", "data/foodbasics.csv")
+scrape_products("https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true", "foodbasics.csv")
 ##print("Scraping Metro...")
 ##scrape_products("https://www.metro.ca/en/online-grocery/search-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals", "metro.csv")
