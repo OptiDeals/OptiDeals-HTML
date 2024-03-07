@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Python Script
         run: |
-          python /scripts/metroAndFoodBasics.py
+          python scripts/metroAndFoodBasics.py
