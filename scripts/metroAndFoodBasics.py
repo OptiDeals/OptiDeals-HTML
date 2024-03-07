@@ -5,9 +5,9 @@ import time
 
 def scrape_products(base_url, csv_file_path):
     product_data = []
-
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     # Get the first page to find the last page number
-    response = requests.get(base_url.format(page=1))
+    response = requests.get(base_url.format(page=1),headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
     pagination = soup.find('div', class_='ppn--pagination')
     if pagination is not None:
