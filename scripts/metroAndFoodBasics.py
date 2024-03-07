@@ -63,5 +63,5 @@ def scrape_products(base_url, csv_file_path):
 # Call the function with the URLs and output files
 print("Scraping Food Basics...")
 scrape_products("https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true", "data/foodbasics.csv")
-##print("Scraping Metro...")
-##scrape_products("https://www.metro.ca/en/online-grocery/search-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals", "metro.csv")
+print("Scraping Metro...")
+scrape_products("https://www.metro.ca/en/online-grocery/search-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals", "data/metro.csv")
