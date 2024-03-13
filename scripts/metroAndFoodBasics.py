@@ -2,42 +2,30 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import time
+foodBasicsURL = "https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true"
+metroURL = "https://www.metro.ca/en/online-grocery/search-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals"
+
 
 def scrape_products(base_url, csv_file_path):
     product_data = []
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-    # Check if the website is reachable
-    try:
-        response = requests.get(base_url.format(page=1), headers=headers)
-        response.raise_for_status()
-    except requests.exceptions.RequestException as err:
-        print ("Error: ",err)
-        return
-    except requests.exceptions.HTTPError as errh:
-        print ("HTTP Error:",errh)
-        return
-    except requests.exceptions.ConnectionError as errc:
-        print ("Error Connecting:",errc)
-        return
-    except requests.exceptions.Timeout as errt:
-        print ("Timeout Error:",errt)
-        return
+
     # Get the first page to find the last page number
-    response = requests.get(base_url.format(page=1),headers=headers)
+    response = requests.get(base_url.format(page=1))
     soup = BeautifulSoup(response.content, 'html.parser')
     pagination = soup.find('div', class_='ppn--pagination')
-    if pagination is not None:
-        last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
-    else:
-        print("Pagination not found. Please check the website structure.")
+    if pagination is None:
+        print("Pagination element not found. Please check the URL or the structure of the webpage.")
         return
-    print(f"Found {last_page_number} pages of products.")
+    else:
+        last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
+        print(f"Found {last_page_number} pages of products.")
     # Loop through each page until the last page
     for page_number in range(1, last_page_number + 1):
         url = base_url.format(page=page_number)
-        response = requests.get(url)
-
-        if response.status_code != 200:
+        response = requests.get(url,)
+        if response.status_code == 403:
+            print("Error 403: Forbidden")
+        elif response.status_code != 200:
             print(f"Error accessing page {page_number}. Continuing to next page.")
             continue
 
@@ -78,6 +66,6 @@ def scrape_products(base_url, csv_file_path):
 
 # Call the function with the URLs and output files
 print("Scraping Food Basics...")
-scrape_products("https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true", "data/foodbasics.csv")
+scrape_products(foodBasicsURL, "foodbasics.csv")
 print("Scraping Metro...")
-scrape_products("https://www.metro.ca/en/online-grocery/search-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals", "data/metro.csv")
+scrape_products(metroURL, "metro.csv")
