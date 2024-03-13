@@ -17,7 +17,7 @@ def scrape_products(base_url, csv_file_path):
         print("Pagination element not found. Please check the URL or the structure of the webpage.")
         return
     else:
-        last_page_number = int(pagination.find_all('a', class_='ppn--element')[-2].text)
+        last_page_number = 1
         print(f"Found {last_page_number} pages of products.")
     # Loop through each page until the last page
     for page_number in range(1, last_page_number + 1):
@@ -66,6 +66,6 @@ def scrape_products(base_url, csv_file_path):
 
 # Call the function with the URLs and output files
 print("Scraping Food Basics...")
-scrape_products(foodBasicsURL, "foodbasics.csv")
+scrape_products(foodBasicsURL, "data/foodbasics.csv")
 print("Scraping Metro...")
-scrape_products(metroURL, "metro.csv")
+scrape_products(metroURL, "data/metro.csv")
