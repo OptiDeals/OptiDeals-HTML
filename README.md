@@ -1,5 +1,7 @@
 # OptiDeals
+
 https://optideals.chancepage.me
+
 Welcome to OptiDeals – the game-changing app that revolutionizes meal planning! Customize your weekly meals based on real-time flyer deals and prices from nearby Ontario grocers. Our app, powered by OpenAI, streamlines the process, saving you time and money. 
 
 ## Introduction
