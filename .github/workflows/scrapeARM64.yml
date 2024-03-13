@@ -16,3 +16,11 @@ jobs:
       - name: Run Python Script
         run: |
           python3 scripts/metroAndFoodBasics.py
+      - name: Commit and push if it changed
+        run: |
+          git diff
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Add changes" -a || echo "No changes to commit"
+          git push
