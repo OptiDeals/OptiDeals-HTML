@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 foodBasicsURL = "https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true"
-metroURL = "https://www.metro.ca/en/online-grocery/flyer-page-{page}?sortOrder=relevance&filter=%3Arelevance%3Adeal%3AFlyer+%26+Deals"
+metroURL = "https://www.metro.ca/en/online-grocery/flyer-page-{page}"
 
 
 def scrape_products(base_url, csv_file_path):
