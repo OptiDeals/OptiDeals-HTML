@@ -29,7 +29,7 @@ total_servings = int(os.getenv('TOTAL_SERVINGS'))  # Desired number of servings
 message = f"Create {num_recipes} recipes using these ingredients: {data}. Each recipe should have a total cost of around {total_cost}, be vegan: {is_vegan}, and serve {total_servings} people. Please provide a name, short description, and a list of ingredients with their costs for each recipe."
 
 # Request a completion from AI
-response = client.chat.completions.create(
+response = openai.api_key.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {
