@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import time
+from datetime import datetime
+
+# Get today's date in the format YYYYMMDD
+today = datetime.today().strftime('%Y%m%d')
+
 foodBasicsURL = "https://www.foodbasics.ca/search-page-{page}?sortOrder=popularity&filter=%3Apopularity%3Adeal%3AFlyer+%26+Deals%2F%3Adeal%3AFlyer+%26+Deals&fromEcomFlyer=true"
 metroURL = "https://www.metro.ca/en/online-grocery/flyer-page-{page}"
 
@@ -66,6 +71,6 @@ def scrape_products(base_url, csv_file_path):
 
 # Call the function with the URLs and output files
 print("Scraping Food Basics...")
-scrape_products(foodBasicsURL, "data/foodbasics.csv")
+scrape_products(foodBasicsURL, f"data/scrapedData/foodBasics/foodbasics_{today}.csv")
 print("Scraping Metro...")
-scrape_products(metroURL, "data/metro.csv")
+scrape_products(metroURL, f"data/scrapedData/metro/metro_{today}.csv")
