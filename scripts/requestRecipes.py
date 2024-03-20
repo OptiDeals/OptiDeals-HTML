@@ -39,12 +39,7 @@ response = openai.ChatCompletion.create(
             "role": "user",
             "content": message
         }
-    ],
-    temperature=1,
-    max_tokens=256,
-    top_p=1,
-    frequency_penalty=0,
-    presence_penalty=0
+    ]
 )
 
 # Extract recipes from response
