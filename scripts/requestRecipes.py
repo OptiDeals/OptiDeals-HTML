@@ -1,7 +1,6 @@
 # Import necessary libraries
 import csv
 import openai
-from openai import OpenAI
 import os
 from datetime import date
 
@@ -29,7 +28,7 @@ total_servings = int(os.getenv('TOTAL_SERVINGS'))  # Desired number of servings
 message = f"Create {num_recipes} recipes using these ingredients: {data}. Each recipe should have a total cost of around {total_cost}, be vegan: {is_vegan}, and serve {total_servings} people. Please provide a name, short description, and a list of ingredients with their costs for each recipe."
 
 # Request a completion from AI
-response = openai.api_key.chat.completions.create(
+response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
         {
