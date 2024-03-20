@@ -50,9 +50,9 @@ response = client.chat.completions.create(
 
 # Extract recipes from response
 recipes = response['choices'][0]['message']['content']
-
+file_path = f'data/requestedRecipes/metro/recipes_{date.today()}.csv'
 # Save recipes to a CSV file
-with open(f'recipe_{date.today()}.csv', 'w', newline='') as file:
+with open(file_path, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Name", "Description", "Ingredients", "Cost per Ingredient", "Total Cost"])
     for recipe in recipes:
