@@ -1,13 +1,13 @@
 # Import necessary libraries
 import csv
-import openai
+from openai import OpenAI
 import os
 from datetime import date
 
 # Load OpenAI API key from environment variables
 api_key = os.getenv('OPENAI_API_KEY')
 # Initialize OpenAI client with API key
-openai.api_key = api_key
+client = OpenAI(api_key=api_key)
 
 # Open CSV file containing ingredients
 with open(os.getenv('CSV_FILE_PATH'), 'r') as file:
@@ -28,7 +28,7 @@ total_servings = int(os.getenv('TOTAL_SERVINGS'))  # Desired number of servings
 message = f"Create {num_recipes} recipes using these ingredients: {data}. Each recipe should have a total cost of around {total_cost}, be vegan: {is_vegan}, and serve {total_servings} people. Please provide a name, short description, and a list of ingredients with their costs for each recipe."
 
 # Request a completion from AI
-response = openai.ChatCompletion.create(
+response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {
@@ -39,7 +39,12 @@ response = openai.ChatCompletion.create(
             "role": "user",
             "content": message
         }
-    ]
+    ],
+    temperature=1,
+    max_tokens=256,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
 )
 
 # Extract recipes from response
