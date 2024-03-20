@@ -8,7 +8,7 @@ from datetime import date
 # Load OpenAI API key from environment variables
 api_key = os.getenv('OPENAI_API_KEY')
 # Initialize OpenAI client with API key
-client = OpenAI(api_key=api_key)
+openai.api_key = api_key
 
 # Open CSV file containing ingredients
 with open(os.getenv('CSV_FILE_PATH'), 'r') as file:
