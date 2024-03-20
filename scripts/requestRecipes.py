@@ -53,6 +53,6 @@ file_path = f'data/requestedRecipes/metro/recipes_{date.today()}.csv'
 # Save recipes to a CSV file
 with open(file_path, 'w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(["Name", "Description", "Ingredients", "Cost per Ingredient", "Total Cost"])
+    writer.writerow(["Name", "Description", "Ingredients", "Cost per Ingredient", "Total Cost", "Is Vegan"])
     for recipe in recipes:
-        writer.writerow([recipe['name'], recipe['description'], recipe['ingredients'], recipe['cost_per_ingredient'], recipe['total_cost']])
+        writer.writerow([recipe['name'], recipe['description'], recipe['ingredients'], recipe['cost_per_ingredient'], recipe['total_cost'], is_vegan])
