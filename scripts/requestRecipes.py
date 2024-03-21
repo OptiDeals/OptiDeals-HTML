@@ -1,5 +1,6 @@
 # Import necessary libraries
 import csv
+import json
 from openai import OpenAI
 import os
 from datetime import date
@@ -25,7 +26,7 @@ is_vegan = os.getenv('IS_VEGAN').lower() == 'true'  # Whether recipes should be 
 total_servings = int(os.getenv('TOTAL_SERVINGS'))  # Desired number of servings
 
 # Create message for AI
-message = f"Create {num_recipes} recipes using these ingredients: {data}. Each recipe should have a total cost of around {total_cost}, be vegan: {is_vegan}, and serve {total_servings} people. Please provide a name, short description, and a list of ingredients with their costs for each recipe."
+message = f"Create {num_recipes} recipes using these ingredients: {data}. Each recipe should have a total cost of around {total_cost}, be vegan: {is_vegan}, and serve {total_servings} people. Please provide a name, short description, and a list of ingredients with their costs for each recipe. Assume availability of basics like butter, milk, eggs, oil, rice, and seasonings. Output in JSON format."
 
 # Request a completion from AI
 response = client.chat.completions.create(
@@ -33,7 +34,7 @@ response = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "You are a helpful assistant."
+            "content": "You are a helpful recipe cook assistant."
         },
         {
             "role": "user",
@@ -49,10 +50,11 @@ response = client.chat.completions.create(
 
 # Extract recipes from response
 recipes = response['choices'][0]['message']['content']
-file_path = f'data/requestedRecipes/metro/recipes_{date.today()}.csv'
-# Save recipes to a CSV file
-with open(file_path, 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(["Name", "Description", "Ingredients", "Cost per Ingredient", "Total Cost", "Is Vegan"])
-    for recipe in recipes:
-        writer.writerow([recipe['name'], recipe['description'], recipe['ingredients'], recipe['cost_per_ingredient'], recipe['total_cost'], is_vegan])
+
+# Convert the recipes to JSON format
+recipes_json = json.dumps(recipes)
+
+file_path = f'data/requestedRecipes/metro/recipes_{date.today()}.json'
+# Save recipes to a JSON file
+with open(file_path, 'w') as file:
+    file.write(recipes_json)
