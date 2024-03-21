@@ -3,7 +3,7 @@ name: ARM Weekly Python Scraper
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7 * * 4"  # Run every Thursday at 7 AM (UTC)
+    - cron: "0 7 * * 4"  # Run every Thursday at 7 AM (EST)
 
 jobs:
   build:
@@ -26,4 +26,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git commit -m "Add changes" -a || echo "No changes to commit"
-          git push
+          git pull origin main --rebase
+          git push origin main
+

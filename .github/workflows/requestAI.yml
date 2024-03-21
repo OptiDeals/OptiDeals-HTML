@@ -1,7 +1,12 @@
 name: OpenAI Script
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
+    workflow_run:
+        workflows: ['ARM Weekly Python Scraper']
+        types: [completed]
+        branches:
+            - 'main'
 
 jobs:
   build:
@@ -21,13 +26,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install openai
 
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y%m%d')"
+
     - name: Run script
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: python api/script.py
-
-    - name: Upload CSV
-      uses: actions/upload-artifact@v2
-      with:
-        name: translations
-        path: translations.csv
+        CSV_FILE_PATH: data/scrapedData/metro/metro_${{ steps.date.outputs.date }}.csv
+        NUM_RECIPES: 10
+        TOTAL_COST: 25
+        IS_VEGAN: false
+        TOTAL_SERVINGS: 2
+      run: python scripts/requestRecipes.py
