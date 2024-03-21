@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <title>OptiDeals</title>
-          <script src="classes/calendar.js"></script> 
-          <link href="./calendar.css" rel="stylesheet"/>
+          <script src="classes/grid.js"></script> 
+          <link href="./grid.css" rel="stylesheet"/>
   </head>
-  <body>
+  <body onload="createRecipes()">
 
 
         <div class="recipe-container">
-          <div class="recipe-header">
+          <div class="recipe-header" id="header">
 
             <div class="store-dropdown">
               <button onclick="dropdownItem('storeDropdown')" class="store-dropbtn">Store ▼</button>
@@ -42,46 +42,10 @@
 
           </div>
 
-
-          <div class="recipe-calendar">
-
-            <div class="calendar-day1">
-
-              <span>Monday</span>
-              
-            </div>
-
-            <div class="calendar-day2">
-             
-              <span>Tuesday</span>
-
-            </div>
-
-            <div class="calendar-day3">
-              
-              <span>Wednesday</span>
-
-            </div>
-
-            <div class="calendar-day4">
-
-              <span>Thursday</span>
-
-            </div>
-
-            <div class="calendar-day5">
-
-              <span>Friday</span>
-
-            </div>
-
-          </div>
-
-          <div class="recipe-footer">
-            
-            <span id="footer">Footer</span> 
           
-          </div>
+          <div class="recipe-grid" id="grid">
+
+            
         </div>
     <script src="javascript/test.js"></script>
   </body>
