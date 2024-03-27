@@ -9,3 +9,10 @@
 .component1-root-class-name {
   width: 100%;
 }
+.component1-root-class-name1 {
+  top: 2px;
+  flex: 1;
+  left: 2px;
+  position: static;
+  align-self: flex-start;
+}
