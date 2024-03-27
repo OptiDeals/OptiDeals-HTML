@@ -11,10 +11,14 @@
 }
 .component1-root-class-name1 {
   top: 2px;
-  flex: 1;
   left: 2px;
   position: static;
   align-self: flex-start;
+}
+@media(max-width: 1200px) {
+  .component1-root-class-name1 {
+    flex: 0 0 auto;
+  }
 }
 
 .page-container {
