@@ -1,8 +1,14 @@
 .app-component-container {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 100px;
   display: flex;
   position: relative;
+  align-items: flex-start;
 }
-.app-component-iframe {
-  width: 1086px;
-  height: 100%;
+@media(max-width: 1200px) {
+  .app-component-container {
+    height: 100%;
+  }
 }
