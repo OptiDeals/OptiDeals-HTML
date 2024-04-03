@@ -121,7 +121,7 @@
     padding-bottom: var(--dl-space-space-fourunits);
   }
   .navbar-branding-logo {
-    width: 80px;
+    width: var(--dl-size-size-xxlarge);
   }
   .navbar-nav-links {
     display: none;
