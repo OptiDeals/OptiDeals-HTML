@@ -212,6 +212,10 @@
   font-family: Poppins;
   line-height: 21px;
 }
+.contact {
+  data-openwidget-action: maximize;
+}
+
 
 
 .Heading {

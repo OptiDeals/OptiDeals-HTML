@@ -56,6 +56,29 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <style>
+      .toggle-content {
+          display: none;
+      }
+    </style>
+    <style>
+      .toggle-header {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .clickable {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .unselectable {
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -70,13 +93,19 @@
           />
           <div class="navbar-nav-content">
             <div class="navbar-nav-links">
-              <span class="nav-link">Recipes</span>
-              <span class="navbar-link1 nav-link">Features</span>
+              <a href="#recipes" class="navbar-link clickable nav-link">
+                Recipes
+              </a>
+              <a href="#features" class="navbar-link1 clickable nav-link">
+                Features
+              </a>
               <span class="clickable contact nav-link">Contact</span>
             </div>
-            <div class="get-started navbar-get-started">
-              <span class="navbar-text">Get started</span>
-            </div>
+            <a href="#recipes" class="navbar-link3">
+              <div class="navbar-get-started clickable get-started">
+                <span class="navbar-text">Get started</span>
+              </div>
+            </a>
             <div id="open-mobile-menu" class="navbar-hamburger get-started">
               <img
                 alt="image"
@@ -168,17 +197,20 @@
                     Discover the Best Deals with OptiDeals
                   </h1>
                   <span class="home-caption">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt.
+                    Where Savings Meet Satisfaction!
                   </span>
                 </header>
                 <div class="home-buttons">
-                  <div class="home-get-started button">
-                    <span class="home-text">Get started</span>
-                  </div>
-                  <div class="home-get-started1 button">
-                    <span class="home-text01">View features</span>
-                  </div>
+                  <a href="#recipes" class="home-link">
+                    <div class="home-get-started button">
+                      <span class="home-text">Get started</span>
+                    </div>
+                  </a>
+                  <a href="#features" class="home-link1">
+                    <div class="home-get-started1 button">
+                      <span class="home-text01">View features</span>
+                    </div>
+                  </a>
                 </div>
               </main>
               <div class="home-highlight">
@@ -191,12 +223,12 @@
                   <img
                     alt="image"
                     src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image01 avatar"
+                    class="home-image1 avatar"
                   />
                   <img
                     alt="image"
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ3fHxwZXJzb258ZW58MHx8fHwxNzExNjQwMTk5fDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image02 avatar"
+                    class="home-image2 avatar"
                   />
                 </div>
                 <label class="home-caption1">
@@ -204,211 +236,26 @@
                 </label>
               </div>
             </div>
-            <div class="home-image03">
-              <img
-                alt="image"
-                src="https://images.unsplash.com/photo-1711126646522-be21d3061feb?ixid=M3w5MTMyMXwwfDF8YWxsfDM3fHx8fHx8Mnx8MTcxMTY0MDI4MXw&amp;ixlib=rb-4.0.3&amp;h=900"
-                class="home-image04"
-              />
-            </div>
-            <div class="home-image05">
-              <img
-                alt="image"
-                src="public/SectionImages/heroimage-1500h.png"
-                class="home-image06"
-              />
-            </div>
           </div>
         </section>
-        <section class="home-section01">
-          <h2 class="home-text02">
-            Our doctors and therapists are here, 24/7.
-          </h2>
-          <div class="home-features">
-            <header class="home-feature feature feature-active">
-              <h3 class="home-text03">Urgent Care</h3>
-              <p class="home-text04">Doloremque laudantium</p>
-            </header>
-            <header class="feature home-feature1">
-              <h3 class="home-text05">Chronic Care</h3>
-              <p class="home-text06">Doloremque laudantium</p>
-            </header>
-            <header class="feature home-feature2">
-              <h3 class="home-text07">Mental Health</h3>
-              <p class="home-text08">Doloremque laudantium</p>
-            </header>
-          </div>
+        <section id="features" class="home-features">
           <div class="home-note">
+            <div class="home-image3">
+              <img
+                alt="image"
+                src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/grocerybasket.png"
+                class="home-image4"
+              />
+            </div>
             <div class="home-content1">
-              <main class="home-main1">
-                <h2 class="home-heading01">
-                  Accessing this Medicare benefit is easy
-                </h2>
-                <p class="home-paragraph">
-                  <span>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae.
-                  </span>
-                  <br />
-                  <br />
-                  <span>
-                    Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                    illo inventore veritatis et quasi architecto beatae.
-                  </span>
-                  <br />
-                </p>
-              </main>
-              <div class="home-explore-more">
-                <p class="home-text14">Explore more -&gt;</p>
+              <div class="home-caption2">
+                <span class="home-section1 section-head">Optideals</span>
               </div>
-            </div>
-            <div class="home-image07">
-              <img
-                alt="image"
-                src="public/SectionImages/group%201490-1200w.png"
-                class="home-image08"
-              />
-            </div>
-          </div>
-        </section>
-        <section class="home-section02">
-          <header class="home-header01">
-            <h2 class="home-text15">Why do you need a mobile medical app?</h2>
-            <span class="home-text16">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
-            </span>
-          </header>
-          <section class="home-note1">
-            <div class="home-image09">
-              <img
-                alt="image"
-                src="public/SectionImages/group%201428-1200w.png"
-                class="home-image10"
-              />
-            </div>
-            <div class="home-content2">
-              <div class="home-main2">
-                <div class="home-caption2">
-                  <span class="home-section03 section-head">
-                    Tempor incididunt
-                  </span>
-                </div>
-                <div class="home-heading02">
+              <div class="home-heading1">
+                <div class="home-header1">
                   <h2 class="section-heading">
-                    We provide compassionate care from start to finish.
-                  </h2>
-                  <p class="section-description">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae.
-                  </p>
-                </div>
-              </div>
-              <div class="home-get-started2 button">
-                <span class="home-text17">Get started</span>
-              </div>
-            </div>
-          </section>
-          <section class="home-note2">
-            <div class="home-image11">
-              <img
-                alt="image"
-                src="public/SectionImages/group%201449-1200w.png"
-                class="home-image12"
-              />
-            </div>
-            <div class="home-content3">
-              <main class="home-main3">
-                <header class="home-caption3">
-                  <span class="home-section04 section-head">
-                    Tempor incididunt
-                  </span>
-                </header>
-                <main class="home-heading04">
-                  <header class="home-header02">
-                    <h2 class="section-heading">
-                      Great care, wherever you are
-                    </h2>
-                    <p class="section-description">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium.
-                    </p>
-                  </header>
-                  <div class="home-checkmarks">
-                    <div class="mark-mark">
-                      <div class="mark-icon">
-                        <svg viewBox="0 0 1024 1024" class="mark-icon1">
-                          <path
-                            d="M384 690l452-452 60 60-512 512-238-238 60-60z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <p class="mark-label">
-                        <span>Duis aute irure dolor in reprehenderit</span>
-                      </p>
-                    </div>
-                    <div class="mark-mark">
-                      <div class="mark-icon">
-                        <svg viewBox="0 0 1024 1024" class="mark-icon1">
-                          <path
-                            d="M384 690l452-452 60 60-512 512-238-238 60-60z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <p class="mark-label">
-                        <span>Quis nostrud exercitation ullamco</span>
-                      </p>
-                    </div>
-                    <div class="mark-mark">
-                      <div class="mark-icon">
-                        <svg viewBox="0 0 1024 1024" class="mark-icon1">
-                          <path
-                            d="M384 690l452-452 60 60-512 512-238-238 60-60z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <p class="mark-label">
-                        <span>Reprehenderit qui in ea voluptate velit</span>
-                      </p>
-                    </div>
-                  </div>
-                </main>
-              </main>
-              <div class="home-get-started3 button">
-                <span class="home-text18">Get started</span>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section class="home-recipes">
-          <iframe
-            src="https://optideals.github.io/OptiDeals-Grid/"
-            class="home-iframe"
-          ></iframe>
-        </section>
-        <section class="home-section05">
-          <div class="home-note3">
-            <div class="home-image13">
-              <img
-                alt="image"
-                src="public/SectionImages/iphone%2014%20pro%20max-1200w.png"
-                class="home-image14"
-              />
-            </div>
-            <div class="home-content4">
-              <div class="home-caption4">
-                <span class="home-section06 section-head">
-                  Tempor incididunt
-                </span>
-              </div>
-              <div class="home-heading06">
-                <div class="home-header03">
-                  <h2 class="section-heading">
-                    Tips to get care, answers and advice faster
+                    <span>Features</span>
+                    <br />
                   </h2>
                 </div>
                 <div class="accordion-accordion accordion-root-class-name">
@@ -417,16 +264,18 @@
                     class="accordion-element"
                   >
                     <div class="accordion-details">
-                      <span class="accordion-text">
-                        <span>Aliquam quaerat voluptatem</span>
+                      <span class="accordion-text toggle-header clickable">
+                        <span>Real-Time Flyer Deals Integration</span>
                       </span>
                       <span
                         data-role="accordion-content"
-                        class="accordion-text1"
+                        class="accordion-text1 toggle-content"
                       >
                         <span>
-                          Sed do eiusmod tempor incididunt ut labore et dolore
-                          magna aliquat enim ad minim veniam, quis nostrud
+                          OptiDeals integrates real-time flyer deals from nearby
+                          Ontario grocers. This allows users to customize their
+                          weekly meals based on the latest deals and prices,
+                          ensuring they get the best value for their money.
                         </span>
                       </span>
                     </div>
@@ -445,16 +294,19 @@
                     class="accordion-element1 accordion-element"
                   >
                     <div class="accordion-details1">
-                      <span class="accordion-text2">
-                        <span>Nemo enim ipsam voluptatem quia voluptas</span>
+                      <span class="accordion-text2 toggle-header clickable">
+                        <span>AI-Powered Meal Planning</span>
                       </span>
                       <span
                         data-role="accordion-content"
-                        class="accordion-text3"
+                        class="accordion-text3 toggle-content"
                       >
                         <span>
-                          Sed do eiusmod tempor incididunt ut labore et dolore
-                          magna aliquat enim ad minim veniam, quis nostrud
+                          Leveraging OpenAI’s advanced algorithms, OptiDeals
+                          generates personalized meal plans based on user
+                          preferences and current deals. This eliminates the
+                          need for manual searching and planning, saving users
+                          time and effort.
                         </span>
                       </span>
                     </div>
@@ -473,16 +325,20 @@
                     class="accordion-element2 accordion-element"
                   >
                     <div class="accordion-details2">
-                      <span class="accordion-text4">
-                        <span>Magnam aliquam quaerat voluptatem</span>
+                      <span class="accordion-text4 toggle-header clickable">
+                        <span>Budget-Friendly Recipe Generation</span>
                       </span>
                       <span
                         data-role="accordion-content"
-                        class="accordion-text5"
+                        class="accordion-text5 toggle-content"
                       >
                         <span>
-                          Sed do eiusmod tempor incididunt ut labore et dolore
-                          magna aliquat enim ad minim veniam, quis nostrud
+                          OptiDeals takes savings to the next level by allowing
+                          users to set their budget within the app. The AI then
+                          curates a week’s worth of delicious recipes based on
+                          the best flyer deals available, making it possible to
+                          enjoy diverse and tasty meals without breaking the
+                          bank.
                         </span>
                       </span>
                     </div>
@@ -501,114 +357,20 @@
             </div>
           </div>
         </section>
-        <section class="home-section07">
-          <div class="home-cube">
-            <div class="home-top side"></div>
-            <div class="home-front side"></div>
-            <div class="home-left side"></div>
-          </div>
-          <main class="home-banner">
-            <div class="home-header04">
-              <h2 class="section-heading">
-                Planical makes online doctor visits easier
-              </h2>
-              <p class="home-description section-description">
-                Lorem ipsum dolor sit amet!
-              </p>
-            </div>
-            <div class="home-buttons1">
-              <div class="home-get-started4 button">
-                <span class="home-text19">Get started</span>
-              </div>
-              <div class="home-book-demo button">
-                <span class="home-text20">Book a demo</span>
-              </div>
-            </div>
-          </main>
-        </section>
-        <section class="home-section08">
-          <header class="home-header05">
-            <span class="home-section09 section-head">Articles about us</span>
-            <h2 class="home-heading09 section-heading">
-              We’re the app on everyone’s lips
-            </h2>
+        <section id="recipes" class="home-recipes">
+          <header class="home-header2">
+            <span class="home-section2 section-head">Recipes</span>
+            <h2 class="home-heading3 section-heading">RECIPES OF THE WEEK</h2>
           </header>
-          <main class="home-cards">
-            <section class="article-card article-root-class-name">
-              <main class="article-content">
-                <header class="article-header">
-                  <h1 class="article-header1"><span>TechCrunch</span></h1>
-                </header>
-                <p class="article-description">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor.
-                  </span>
-                </p>
-                <div class="article-button">
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="article-link"
-                  >
-                    <p class="article-text"><span>Read -&gt;</span></p>
-                  </a>
-                </div>
-              </main>
-            </section>
-            <section class="article-card article-root-class-name">
-              <main class="article-content">
-                <header class="article-header">
-                  <h1 class="article-header1"><span>techeu</span></h1>
-                </header>
-                <p class="article-description">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor.
-                  </span>
-                </p>
-                <div class="article-button">
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="article-link"
-                  >
-                    <p class="article-text"><span>Read -&gt;</span></p>
-                  </a>
-                </div>
-              </main>
-            </section>
-            <section class="article-card article-root-class-name">
-              <main class="article-content">
-                <header class="article-header">
-                  <h1 class="article-header1"><span>sifted/</span></h1>
-                </header>
-                <p class="article-description">
-                  <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor.
-                  </span>
-                </p>
-                <div class="article-button">
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="article-link"
-                  >
-                    <p class="article-text"><span>Read -&gt;</span></p>
-                  </a>
-                </div>
-              </main>
-            </section>
-          </main>
+          <iframe
+            src="https://optideals.github.io/OptiDeals-Grid/"
+            class="home-iframe"
+          ></iframe>
         </section>
-        <section class="home-section10">
-          <header class="home-header06">
-            <span class="home-section11 section-head">FAQ</span>
-            <h2 class="home-heading10 section-heading">
+        <section class="home-faq">
+          <header class="home-header3">
+            <span class="home-section3 section-head">FAQ</span>
+            <h2 class="home-heading4 section-heading">
               Frequently asked questions
             </h2>
           </header>
@@ -619,16 +381,22 @@
                 class="faq-element accordion-element"
               >
                 <div class="faq-details">
-                  <span class="faq-text">
-                    What is sit amet, consectetur adipiscing elit, sed do?
+                  <span class="faq-text clickable toggle-header">
+                    Is OptiDeals planning to use LLM or Llama AI for training
+                    recipes and data based on grocery store sales?
                   </span>
-                  <span data-role="accordion-content" class="faq-text01">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
+                  <span
+                    data-role="accordion-content"
+                    class="faq-text1 toggle-content"
+                  >
+                    Yes, OptiDeals is always looking for ways to improve and
+                    provide the best service to our users. We are exploring the
+                    possibility of transitioning to a LLM (Language Model) or
+                    Llama AI. This advanced AI technology would allow us to
+                    train recipes and data based on the foods on sale at grocery
+                    stores, further enhancing the personalization and accuracy
+                    of our meal plans. Stay tuned for updates on this exciting
+                    development!
                   </span>
                 </div>
                 <div data-role="accordion-icon">
@@ -644,21 +412,21 @@
                 class="faq-element1 accordion-element"
               >
                 <div class="faq-details1">
-                  <span class="faq-text02">
-                    We'll update amet, consectetur adipiscing elit until you're
-                    100% happy.
+                  <span class="faq-text2 clickable toggle-header">
+                    How does OptiDeals generate meal plans based on flyer deals?
                   </span>
-                  <span data-role="accordion-content" class="faq-text03">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
+                  <span
+                    data-role="accordion-content"
+                    class="faq-text3 toggle-content"
+                  >
+                    OptiDeals uses advanced algorithms to scan real-time flyer
+                    deals from nearby Ontario grocers. It then generates
+                    personalized meal plans based on these deals and your
+                    preferences.
                   </span>
                 </div>
                 <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon02">
+                  <svg viewBox="0 0 1024 1024" class="faq-icon2">
                     <path
                       d="M366 708l196-196-196-196 60-60 256 256-256 256z"
                     ></path>
@@ -670,97 +438,21 @@
                 class="faq-element2 accordion-element"
               >
                 <div class="faq-details2">
-                  <span class="faq-text04">
-                    Is it really sit amet, consectetur adipiscing elit, sed do?
+                  <span class="faq-text4 toggle-header clickable">
+                    Can I set a budget for my meals in OptiDeals?
                   </span>
-                  <span data-role="accordion-content" class="faq-text05">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon04">
-                    <path
-                      d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div
-                data-role="accordion-container"
-                class="faq-element3 accordion-element"
-              >
-                <div class="faq-details3">
-                  <span class="faq-text06">
-                    We work, what is sit amet, consectetur adipiscing elit, sed
-                    do sint occaecat cupidatat non proident
-                  </span>
-                  <span data-role="accordion-content" class="faq-text07">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
+                  <span
+                    data-role="accordion-content"
+                    class="faq-text5 toggle-content"
+                  >
+                    Yes, OptiDeals allows you to set a budget for your meals.
+                    The app will then generate a week’s worth of recipes that
+                    fit within your budget, using the best available flyer
+                    deals.
                   </span>
                 </div>
                 <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon06">
-                    <path
-                      d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div
-                data-role="accordion-container"
-                class="faq-element4 accordion-element"
-              >
-                <div class="faq-details4">
-                  <span class="faq-text08">
-                    What is sit amet, consectetur adipiscing elit, sed do?
-                  </span>
-                  <span data-role="accordion-content" class="faq-text09">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon08">
-                    <path
-                      d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div
-                data-role="accordion-container"
-                class="faq-element5 accordion-element"
-              >
-                <div class="faq-details5">
-                  <span class="faq-text10">
-                    Amet, consectetur adipiscing elit mollit anim id est
-                    laborum.
-                  </span>
-                  <span data-role="accordion-content" class="faq-text11">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum
-                    sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id.
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon10">
+                  <svg viewBox="0 0 1024 1024" class="faq-icon4">
                     <path
                       d="M366 708l196-196-196-196 60-60 256 256-256 256z"
                     ></path>
@@ -771,26 +463,26 @@
           </main>
         </section>
         <footer class="home-footer">
-          <div class="home-content5">
+          <div class="home-content2">
             <main class="home-main-content">
-              <div class="home-content6">
-                <header class="home-main4">
-                  <div class="home-header07">
+              <div class="home-content3">
+                <header class="home-main1">
+                  <div class="home-header4">
                     <img
                       alt="image"
                       src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
                       class="home-branding"
                     />
-                    <span class="home-text21">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <span class="home-text04">
+                      Revolutionizing recipes&nbsp;
                     </span>
                   </div>
                   <div class="home-socials">
                     <a
-                      href="https://example.com"
+                      href="https://linkedin.com"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link"
+                      class="home-link2"
                     >
                       <img
                         alt="image"
@@ -799,10 +491,10 @@
                       />
                     </a>
                     <a
-                      href="https://example.com"
+                      href="https://instagram.com"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link1"
+                      class="home-link3"
                     >
                       <img
                         alt="image"
@@ -811,10 +503,10 @@
                       />
                     </a>
                     <a
-                      href="https://example.com"
+                      href="https://twitter.com"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="home-link2"
+                      class="home-link4"
                     >
                       <img
                         alt="image"
@@ -824,43 +516,14 @@
                     </a>
                   </div>
                 </header>
-                <header class="home-categories">
-                  <div class="home-category">
-                    <div class="home-header08">
-                      <span class="footer-header">Solutions</span>
-                    </div>
-                    <div class="home-links">
-                      <span class="footer-link">Responsive Web Design</span>
-                      <span class="footer-link">Responsive Prototypes</span>
-                      <span class="footer-link">Design to Code</span>
-                      <span class="footer-link">Static Website Builder</span>
-                      <span class="footer-link">Static Website Generator</span>
-                    </div>
-                  </div>
-                  <div class="home-category1">
-                    <div class="home-header09">
-                      <span class="footer-header">Company</span>
-                    </div>
-                    <div class="home-links1">
-                      <span class="footer-link">About</span>
-                      <span class="footer-link">Team</span>
-                      <span class="footer-link">News</span>
-                      <span class="footer-link">Partners</span>
-                      <span class="footer-link">Careers</span>
-                      <span class="footer-link">Press &amp; Media</span>
-                    </div>
-                  </div>
-                </header>
               </div>
               <section class="home-copyright">
-                <span class="home-text35">
-                  © 2022 latitude. All Rights Reserved.
-                </span>
+                <span class="home-text05">© 2024 OptiDeals Inc.</span>
               </section>
             </main>
             <main class="home-subscribe">
-              <main class="home-main5">
-                <h1 class="home-heading11">Subscribe to our newsletter</h1>
+              <main class="home-main2">
+                <h1 class="home-heading5">Subscribe to our newsletter</h1>
                 <div class="home-input-field">
                   <input
                     type="email"
@@ -868,8 +531,8 @@
                     class="home-textinput input"
                   />
                   <div class="home-buy button">
-                    <span class="home-text36">-&gt;</span>
-                    <span class="home-text37">
+                    <span class="home-text06">-&gt;</span>
+                    <span class="home-text07">
                       <span>Subscribe now</span>
                       <br />
                     </span>
@@ -877,12 +540,12 @@
                 </div>
               </main>
               <h1 class="home-notice">
-                By subscribing to our newsletter you agree with our Terms and
-                Conditions.
+                By subscribing to our newsletter you agree to receive our emails
+                regarding OptiDeals.
               </h1>
             </main>
             <section class="home-copyright1">
-              <span class="home-text40">
+              <span class="home-text10">
                 © 2022 latitude. All Rights Reserved.
               </span>
             </section>
@@ -968,6 +631,21 @@
       window.__ow = window.__ow || {};
       window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <script>
+      window.onload = function() {
+          var headers = document.getElementsByClassName('toggle-header');
+          for (var i = 0; i < headers.length; i++) {
+              headers[i].addEventListener('click', function() {
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "none" || content.style.display === "") {
+                      content.style.display = "block";
+                  } else {
+                      content.style.display = "none";
+                  }
+              });
+          }
+      }
     </script>
   </body>
 </html>

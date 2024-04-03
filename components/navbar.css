@@ -30,7 +30,16 @@
   align-items: flex-start;
   border-color: transparent;
 }
+.navbar-link {
+  text-decoration: none;
+}
 .navbar-link1 {
+  text-decoration: none;
+}
+.navbar-link3 {
+  display: contents;
+}
+.navbar-get-started {
   text-decoration: none;
 }
 .navbar-text {

@@ -51,6 +51,29 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <style>
+      .toggle-content {
+          display: none;
+      }
+    </style>
+    <style>
+      .toggle-header {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .clickable {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .unselectable {
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
   </head>
   <body>
     <link rel="stylesheet" href="../style.css" />
@@ -59,13 +82,18 @@
       <div class="accordion-accordion">
         <div data-role="accordion-container" class="accordion-element">
           <div class="accordion-details">
-            <span class="accordion-text">
-              <span>Aliquam quaerat voluptatem</span>
+            <span class="accordion-text toggle-header clickable">
+              <span>Real-Time Flyer Deals Integration</span>
             </span>
-            <span data-role="accordion-content" class="accordion-text1">
+            <span
+              data-role="accordion-content"
+              class="accordion-text1 toggle-content"
+            >
               <span>
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliquat enim ad minim veniam, quis nostrud
+                OptiDeals integrates real-time flyer deals from nearby Ontario
+                grocers. This allows users to customize their weekly meals based
+                on the latest deals and prices, ensuring they get the best value
+                for their money.
               </span>
             </span>
           </div>
@@ -82,13 +110,18 @@
           class="accordion-element1 accordion-element"
         >
           <div class="accordion-details1">
-            <span class="accordion-text2">
-              <span>Nemo enim ipsam voluptatem quia voluptas</span>
+            <span class="accordion-text2 toggle-header clickable">
+              <span>AI-Powered Meal Planning</span>
             </span>
-            <span data-role="accordion-content" class="accordion-text3">
+            <span
+              data-role="accordion-content"
+              class="accordion-text3 toggle-content"
+            >
               <span>
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliquat enim ad minim veniam, quis nostrud
+                Leveraging OpenAI’s advanced algorithms, OptiDeals generates
+                personalized meal plans based on user preferences and current
+                deals. This eliminates the need for manual searching and
+                planning, saving users time and effort.
               </span>
             </span>
           </div>
@@ -105,13 +138,19 @@
           class="accordion-element2 accordion-element"
         >
           <div class="accordion-details2">
-            <span class="accordion-text4">
-              <span>Magnam aliquam quaerat voluptatem</span>
+            <span class="accordion-text4 toggle-header clickable">
+              <span>Budget-Friendly Recipe Generation</span>
             </span>
-            <span data-role="accordion-content" class="accordion-text5">
+            <span
+              data-role="accordion-content"
+              class="accordion-text5 toggle-content"
+            >
               <span>
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliquat enim ad minim veniam, quis nostrud
+                OptiDeals takes savings to the next level by allowing users to
+                set their budget within the app. The AI then curates a week’s
+                worth of delicious recipes based on the best flyer deals
+                available, making it possible to enjoy diverse and tasty meals
+                without breaking the bank.
               </span>
             </span>
           </div>
@@ -129,6 +168,21 @@
       window.__ow = window.__ow || {};
       window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <script>
+      window.onload = function() {
+          var headers = document.getElementsByClassName('toggle-header');
+          for (var i = 0; i < headers.length; i++) {
+              headers[i].addEventListener('click', function() {
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "none" || content.style.display === "") {
+                      content.style.display = "block";
+                  } else {
+                      content.style.display = "none";
+                  }
+              });
+          }
+      }
     </script>
   </body>
 </html>

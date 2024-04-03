@@ -51,6 +51,29 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <style>
+      .toggle-content {
+          display: none;
+      }
+    </style>
+    <style>
+      .toggle-header {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .clickable {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .unselectable {
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
   </head>
   <body>
     <link rel="stylesheet" href="../style.css" />
@@ -62,16 +85,21 @@
           class="faq-element accordion-element"
         >
           <div class="faq-details">
-            <span class="faq-text">
-              What is sit amet, consectetur adipiscing elit, sed do?
+            <span class="faq-text clickable toggle-header">
+              Is OptiDeals planning to use LLM or Llama AI for training recipes
+              and data based on grocery store sales?
             </span>
-            <span data-role="accordion-content" class="faq-text01">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role="accordion-content"
+              class="faq-text1 toggle-content"
+            >
+              Yes, OptiDeals is always looking for ways to improve and provide
+              the best service to our users. We are exploring the possibility of
+              transitioning to a LLM (Language Model) or Llama AI. This advanced
+              AI technology would allow us to train recipes and data based on
+              the foods on sale at grocery stores, further enhancing the
+              personalization and accuracy of our meal plans. Stay tuned for
+              updates on this exciting development!
             </span>
           </div>
           <div data-role="accordion-icon">
@@ -85,21 +113,20 @@
           class="faq-element1 accordion-element"
         >
           <div class="faq-details1">
-            <span class="faq-text02">
-              We'll update amet, consectetur adipiscing elit until you're 100%
-              happy.
+            <span class="faq-text2 clickable toggle-header">
+              How does OptiDeals generate meal plans based on flyer deals?
             </span>
-            <span data-role="accordion-content" class="faq-text03">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role="accordion-content"
+              class="faq-text3 toggle-content"
+            >
+              OptiDeals uses advanced algorithms to scan real-time flyer deals
+              from nearby Ontario grocers. It then generates personalized meal
+              plans based on these deals and your preferences.
             </span>
           </div>
           <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" class="faq-icon02">
+            <svg viewBox="0 0 1024 1024" class="faq-icon2">
               <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
             </svg>
           </div>
@@ -109,90 +136,20 @@
           class="faq-element2 accordion-element"
         >
           <div class="faq-details2">
-            <span class="faq-text04">
-              Is it really sit amet, consectetur adipiscing elit, sed do?
+            <span class="faq-text4 toggle-header clickable">
+              Can I set a budget for my meals in OptiDeals?
             </span>
-            <span data-role="accordion-content" class="faq-text05">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
-            </span>
-          </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" class="faq-icon04">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          data-role="accordion-container"
-          class="faq-element3 accordion-element"
-        >
-          <div class="faq-details3">
-            <span class="faq-text06">
-              We work, what is sit amet, consectetur adipiscing elit, sed do
-              sint occaecat cupidatat non proident
-            </span>
-            <span data-role="accordion-content" class="faq-text07">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
+            <span
+              data-role="accordion-content"
+              class="faq-text5 toggle-content"
+            >
+              Yes, OptiDeals allows you to set a budget for your meals. The app
+              will then generate a week’s worth of recipes that fit within your
+              budget, using the best available flyer deals.
             </span>
           </div>
           <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" class="faq-icon06">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          data-role="accordion-container"
-          class="faq-element4 accordion-element"
-        >
-          <div class="faq-details4">
-            <span class="faq-text08">
-              What is sit amet, consectetur adipiscing elit, sed do?
-            </span>
-            <span data-role="accordion-content" class="faq-text09">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
-            </span>
-          </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" class="faq-icon08">
-              <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          data-role="accordion-container"
-          class="faq-element5 accordion-element"
-        >
-          <div class="faq-details5">
-            <span class="faq-text10">
-              Amet, consectetur adipiscing elit mollit anim id est laborum.
-            </span>
-            <span data-role="accordion-content" class="faq-text11">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id.
-            </span>
-          </div>
-          <div data-role="accordion-icon">
-            <svg viewBox="0 0 1024 1024" class="faq-icon10">
+            <svg viewBox="0 0 1024 1024" class="faq-icon4">
               <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
             </svg>
           </div>
@@ -203,6 +160,21 @@
       window.__ow = window.__ow || {};
       window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <script>
+      window.onload = function() {
+          var headers = document.getElementsByClassName('toggle-header');
+          for (var i = 0; i < headers.length; i++) {
+              headers[i].addEventListener('click', function() {
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "none" || content.style.display === "") {
+                      content.style.display = "block";
+                  } else {
+                      content.style.display = "none";
+                  }
+              });
+          }
+      }
     </script>
   </body>
 </html>

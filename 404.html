@@ -51,6 +51,29 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <style>
+      .toggle-content {
+          display: none;
+      }
+    </style>
+    <style>
+      .toggle-header {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .clickable {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .unselectable {
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -73,6 +96,21 @@
       window.__ow = window.__ow || {};
       window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
       ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <script>
+      window.onload = function() {
+          var headers = document.getElementsByClassName('toggle-header');
+          for (var i = 0; i < headers.length; i++) {
+              headers[i].addEventListener('click', function() {
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "none" || content.style.display === "") {
+                      content.style.display = "block";
+                  } else {
+                      content.style.display = "none";
+                  }
+              });
+          }
+      }
     </script>
   </body>
 </html>
