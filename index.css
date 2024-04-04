@@ -1,16 +1,15 @@
 .navbar-navbar {
   width: 100%;
   display: flex;
-  z-index: 1000;
-  position: relative;
+  z-index: 1;
+  position: fixed;
   max-width: 1200px;
   align-self: auto;
   align-items: center;
-  flex-shrink: 1;
-  padding-top: var(--dl-space-space-twounits);
+  padding-top: var(--dl-space-space-unit);
   padding-left: var(--dl-space-space-oneandhalfunits);
   padding-right: var(--dl-space-space-oneandhalfunits);
-  padding-bottom: var(--dl-space-space-fiveunits);
+  padding-bottom: var(--dl-space-space-unit);
 }
 .navbar-branding-logo {
   width: var(--dl-size-size-xxlarge);
@@ -126,10 +125,15 @@
 .navbar-container2 {
   display: contents;
 }
-
+.navbar-root-class-name {
+  top: 0px;
+  left: 0px;
+  position: static;
+}
 @media(max-width: 767px) {
   .navbar-navbar {
-    padding-bottom: var(--dl-space-space-fourunits);
+    padding-top: var(--dl-space-space-halfunit);
+    padding-bottom: var(--dl-space-space-halfunit);
   }
   .navbar-branding-logo {
     width: var(--dl-size-size-xxlarge);
