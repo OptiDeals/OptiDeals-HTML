@@ -102,14 +102,12 @@
                   ><span>Get started</span></span
                 ></div
               ></a
-            ><div
-              id="open-mobile-menu"
-              class="app-component-hamburger get-started"
+            ><div id="open-mobile-menu" class="get-started menuOpener"
               ><img
                 alt="image"
                 src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
                 class="app-component-image" /></div></div
-          ><div id="mobile-menu" class="app-component-mobile-menu closeMenu"
+          ><div id="mobile-menu" class="closeMenu showMenu"
             ><div class="app-component-branding"
               ><img
                 alt="image"
@@ -225,6 +223,18 @@
                   var elements = document.getElementsByClassName('closeMenu');
                   for(var j = 0; j < elements.length; j++){
                       elements[j].style.display = 'none';
+                  }
+              });
+          }
+      };</script
+    ><script>
+      window.onload = function() {
+          var buttons = document.getElementsByClassName('menuOpener');
+          for(var i = 0; i < buttons.length; i++){
+              buttons[i].addEventListener('click', function() {
+                  var elements = document.getElementsByClassName('showMenu');
+                  for(var j = 0; j < elements.length; j++){
+                      elements[j].style.display = 'block';
                   }
               });
           }

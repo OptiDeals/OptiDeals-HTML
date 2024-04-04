@@ -112,6 +112,18 @@
                   }
               });
           }
+      };</script
+    ><script>
+      window.onload = function() {
+          var buttons = document.getElementsByClassName('menuOpener');
+          for(var i = 0; i < buttons.length; i++){
+              buttons[i].addEventListener('click', function() {
+                  var elements = document.getElementsByClassName('showMenu');
+                  for(var j = 0; j < elements.length; j++){
+                      elements[j].style.display = 'block';
+                  }
+              });
+          }
       };
     </script></body
   ></html

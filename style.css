@@ -221,6 +221,25 @@
 
 
 
+.menuOpener {
+  display: none;
+}
+.showMenu {
+  gap: var(--dl-space-space-twounits);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  z-index: 1000;
+  position: fixed;
+  transform: translateX(100%);
+  transition: 0.3s;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: #fff;
+}
 .Heading {
   font-size: 32px;
   font-family: Inter;
@@ -244,6 +263,14 @@
   }
   .accordion-element {
     gap: var(--dl-space-space-oneandhalfunits);
+  }
+  .menuOpener {
+    display: flex;
+    padding-top: var(--dl-space-space-halfunit);
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    padding-bottom: var(--dl-space-space-halfunit);
+    background-color: #ffffff;
   }
 }
 @media(max-width: 479px) {
