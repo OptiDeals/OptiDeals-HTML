@@ -36,7 +36,10 @@
 .navbar-link1 {
   text-decoration: none;
 }
-.navbar-link3 {
+.navbar-link2 {
+  text-decoration: none;
+}
+.navbar-link4 {
   display: contents;
 }
 .navbar-get-started {
@@ -102,6 +105,15 @@
   display: flex;
   flex-direction: column;
 }
+.navbar-link5 {
+  text-decoration: none;
+}
+.navbar-link6 {
+  text-decoration: none;
+}
+.navbar-link7 {
+  text-decoration: none;
+}
 .navbar-text1 {
   color: rgba(255, 255, 255, 1);
   align-self: auto;
@@ -131,12 +143,15 @@
   }
   .navbar-hamburger {
     display: flex;
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
+    padding-top: var(--dl-space-space-halfunit);
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    padding-bottom: var(--dl-space-space-halfunit);
+    background-color: #ffffff;
   }
   .navbar-image {
-    width: 16px;
-    height: 14px;
+    width: var(--dl-size-size-small);
+    height: 100%;
   }
   .navbar-branding {
     width: 100%;

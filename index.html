@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>OptiDeals</title>
-    <meta property="og:title" content="OptiDeals" />
-    <meta
+<html lang="en"
+  ><head
+    ><title>OptiDeals</title
+    ><meta
+      name="description"
+      content="Customize your weekly meals based on real-time flyer deals and prices from nearby Ontario grocers. Our app, powered by OpenAI, streamlines the process, saving you time and money."
+    /><meta property="og:title" content="OptiDeals" /><meta
+      property="og:description"
+      content="Customize your weekly meals based on real-time flyer deals and prices from nearby Ontario grocers. Our app, powered by OpenAI, streamlines the process, saving you time and money."
+    /><meta
       property="og:image"
       content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2b5cfbdd-632e-4c5b-bbc0-4a3b524b4a61/5cd39434-b305-48b3-8f46-05aedcb42f04?org_if_sml=1&amp;force_format=original"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    /><style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style
+    ><style data-tag="default-style-sheet">
       html {
         font-family: Inter;
         font-size: 16px;
@@ -30,33 +35,27 @@
         color: var(--dl-color-gray-black);
         background-color: var(--dl-color-gray-white);
 
-      }
-    </style>
-    <link
+      }</style
+    ><link
       rel="stylesheet"
       href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
+    /><link
       rel="shortcut icon"
       href="public/optidealslogocropped.png"
       type="icon/png"
       sizes="32x32"
-    />
-    <link
+    /><link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
-    />
-    <link
+    /><link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
-    />
-    <link
+    /><link
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-    <style>
+    /><style>
       .toggle-content {
           display: none;
       }
@@ -78,78 +77,75 @@
         -ms-user-select: none; /* IE 10+ */
         user-select: none; /* Standard syntax */
       }
-    </style>
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
-
-      <div class="home-container">
-        <nav class="navbar-navbar navbar-root-class-name">
-          <img
+    </style></head
+  ><body
+    ><link rel="stylesheet" href="./style.css" /><div
+      ><link href="./index.css" rel="stylesheet" /><div class="home-container"
+        ><nav class="navbar-navbar navbar-root-class-name"
+          ><img
             src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
             class="navbar-branding-logo"
-          />
-          <div class="navbar-nav-content">
-            <div class="navbar-nav-links">
-              <a href="#recipes" class="navbar-link clickable nav-link">
-                Recipes
-              </a>
-              <a href="#features" class="navbar-link1 clickable nav-link">
-                Features
-              </a>
-              <span
+          /><div class="navbar-nav-content"
+            ><div class="navbar-nav-links"
+              ><a href="#recipes" class="navbar-link clickable nav-link"
+                >Recipes</a
+              ><a href="#features" class="navbar-link1 clickable nav-link"
+                >Features</a
+              ><a
+                href="https://github.com/orgs/OptiDeals/repositories"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="navbar-link2 clickable nav-link"
+                >GitHub</a
+              ><span
                 data-openwidget-action="maximize"
                 class="clickable contact nav-link"
-              >
-                Contact
-              </span>
-            </div>
-            <a href="#recipes" class="navbar-link3">
-              <div class="navbar-get-started clickable get-started">
-                <span class="navbar-text">Get started</span>
-              </div>
-            </a>
-            <div id="open-mobile-menu" class="navbar-hamburger get-started">
-              <img
+                >Contact</span
+              ></div
+            ><a href="#recipes" class="navbar-link4"
+              ><div class="navbar-get-started clickable get-started"
+                ><span class="navbar-text">Get started</span></div
+              ></a
+            ><div id="open-mobile-menu" class="navbar-hamburger get-started"
+              ><img
                 alt="image"
-                src="public/Icons/hamburger-200h.png"
-                class="navbar-image"
-              />
-            </div>
-          </div>
-          <div id="mobile-menu" class="navbar-mobile-menu">
-            <div class="navbar-branding">
-              <img
+                src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
+                class="navbar-image" /></div></div
+          ><div id="mobile-menu" class="navbar-mobile-menu closeMenu"
+            ><div class="navbar-branding"
+              ><img
                 src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsLogoCropped.png"
-                class="navbar-image1"
-              />
-              <div id="close-mobile-menu" class="navbar-container">
-                <svg viewBox="0 0 1024 1024" class="navbar-icon">
+                class="navbar-image1" /><div
+                id="close-mobile-menu"
+                class="navbar-container"
+                ><svg viewBox="0 0 1024 1024" class="navbar-icon">
                   <path
                     d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div class="navbar-nav-links1">
-              <span class="nav-link"><span>Recipes</span></span>
-              <span class="nav-link">Features</span>
-              <span
+                  ></path></svg></div></div
+            ><div class="navbar-nav-links1"
+              ><a href="#recipes" class="navbar-link5 menuCloser nav-link"
+                ><span>Recipes</span></a
+              ><a href="#features" class="navbar-link6 menuCloser nav-link"
+                >Features</a
+              ><a
+                href="https://github.com/orgs/OptiDeals/repositories"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="navbar-link7 menuCloser nav-link"
+                ><span>GitHub</span></a
+              ><span
                 data-openwidget-action="maximize"
-                class="nav-link clickable contact"
-              >
-                Contact
-              </span>
-            </div>
-            <div class="get-started">
-              <span class="navbar-text1 clickable">Get started</span>
-            </div>
-          </div>
-          <div>
-            <div class="navbar-container2">
-              <script defer="">
+                class="menuCloser clickable contact nav-link"
+                >Contact</span
+              ></div
+            ><div class="get-started"
+              ><a href="#recipes" class="navbar-text1 menuCloser clickable"
+                >Get started</a
+              ></div
+            ></div
+          ><div
+            ><div class="navbar-container2"
+              ><script defer="">
                     /*
                 Mobile menu - Code Embed
                 */
@@ -192,212 +188,168 @@
 
                 runMobileMenuCodeEmbed()
                 listenForUrlChangesMobileMenu()
-              </script>
-            </div>
-          </div>
-        </nav>
-        <section class="home-section">
-          <div class="home-hero">
-            <div class="home-content">
-              <main class="home-main">
-                <header class="home-header">
-                  <h1 class="home-heading">
-                    Discover the Best Deals with OptiDeals
-                  </h1>
-                  <span class="home-caption">
-                    Where Savings Meet Satisfaction!
-                  </span>
-                </header>
-                <div class="home-buttons">
-                  <a href="#recipes" class="home-link">
-                    <div class="home-get-started button">
-                      <span class="home-text">Get started</span>
-                    </div>
-                  </a>
-                  <a href="#features" class="home-link1">
-                    <div class="home-get-started1 button">
-                      <span class="home-text1">View features</span>
-                    </div>
-                  </a>
-                </div>
-              </main>
-              <div class="home-highlight">
-                <div class="home-avatars">
-                  <img
+              </script></div
+            ></div
+          ></nav
+        ><section class="home-section"
+          ><div class="home-hero"
+            ><div class="home-content"
+              ><main class="home-main"
+                ><header class="home-header"
+                  ><h1 class="home-heading"
+                    >Discover the Best Deals with OptiDeals</h1
+                  ><span class="home-caption"
+                    >Where Savings Meet Satisfaction!</span
+                  ></header
+                ><div class="home-buttons"
+                  ><a href="#recipes" class="home-link"
+                    ><div class="home-get-started button"
+                      ><span class="home-text">Get started</span></div
+                    ></a
+                  ><a href="#features" class="home-link1"
+                    ><div class="home-get-started1 button"
+                      ><span class="home-text1">View features</span></div
+                    ></a
+                  ></div
+                ></main
+              ><div class="home-highlight"
+                ><div class="home-avatars"
+                  ><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image avatar"
-                  />
-                  <img
+                    class="home-image avatar" /><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image1 avatar"
-                  />
-                  <img
+                    class="home-image1 avatar" /><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ3fHxwZXJzb258ZW58MHx8fHwxNzExNjQwMTk5fDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image2 avatar"
-                  />
-                </div>
-                <label class="home-caption1">
-                  Loved by 1,000+ people like you.
-                </label>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="features" class="home-features">
-          <div class="home-note">
-            <div class="home-image3">
-              <img
+                    class="home-image2 avatar" /></div
+                ><label class="home-caption1"
+                  >Loved by 1,000+ people like you.</label
+                ></div
+              ></div
+            ></div
+          ></section
+        ><section id="features" class="home-features"
+          ><div class="home-note"
+            ><div class="home-image3"
+              ><img
                 alt="image"
                 src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/grocerybasket.png"
-                class="home-image4"
-              />
-            </div>
-            <div class="home-content1">
-              <div class="home-caption2">
-                <span class="home-section1 section-head">Optideals</span>
-              </div>
-              <div class="home-heading1">
-                <div class="home-header1">
-                  <h2 class="section-heading">
-                    <span>Features</span>
-                    <br />
-                  </h2>
-                </div>
-                <div class="accordion-accordion accordion-root-class-name">
-                  <div
+                class="home-image4" /></div
+            ><div class="home-content1"
+              ><div class="home-caption2"
+                ><span class="home-section1 section-head">Optideals</span></div
+              ><div class="home-heading1"
+                ><div class="home-header1"
+                  ><h2 class="section-heading"
+                    ><span>Features</span><br /></h2></div
+                ><div class="accordion-accordion accordion-root-class-name"
+                  ><div
                     data-role="accordion-container"
                     class="accordion-element"
-                  >
-                    <div class="accordion-details">
-                      <span class="accordion-text toggle-header clickable">
-                        <span>Real-Time Flyer Deals Integration</span>
-                      </span>
-                      <span
+                    ><div class="accordion-details"
+                      ><span class="accordion-text toggle-header clickable"
+                        ><span>Real-Time Flyer Deals Integration</span></span
+                      ><span
                         data-role="accordion-content"
                         class="accordion-text1 toggle-content"
-                      >
-                        <span>
-                          OptiDeals integrates real-time flyer deals from nearby
-                          Ontario grocers. This allows users to customize their
-                          weekly meals based on the latest deals and prices,
-                          ensuring they get the best value for their money.
-                        </span>
-                      </span>
-                    </div>
-                    <svg
+                        ><span
+                          >OptiDeals integrates real-time flyer deals from
+                          nearby Ontario grocers. This allows users to customize
+                          their weekly meals based on the latest deals and
+                          prices, ensuring they get the best value for their
+                          money.</span
+                        ></span
+                      ></div
+                    ><svg
                       viewBox="0 0 1024 1024"
                       data-role="accordion-icon"
                       class="accordion-icon"
                     >
                       <path
                         d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div
+                      ></path></svg></div
+                  ><div
                     data-role="accordion-container"
                     class="accordion-element1 accordion-element"
-                  >
-                    <div class="accordion-details1">
-                      <span class="accordion-text2 toggle-header clickable">
-                        <span>AI-Powered Meal Planning</span>
-                      </span>
-                      <span
+                    ><div class="accordion-details1"
+                      ><span class="accordion-text2 toggle-header clickable"
+                        ><span>AI-Powered Meal Planning</span></span
+                      ><span
                         data-role="accordion-content"
                         class="accordion-text3 toggle-content"
-                      >
-                        <span>
-                          Leveraging OpenAI’s advanced algorithms, OptiDeals
+                        ><span
+                          >Leveraging OpenAI’s advanced algorithms, OptiDeals
                           generates personalized meal plans based on user
                           preferences and current deals. This eliminates the
                           need for manual searching and planning, saving users
-                          time and effort.
-                        </span>
-                      </span>
-                    </div>
-                    <svg
+                          time and effort.</span
+                        ></span
+                      ></div
+                    ><svg
                       viewBox="0 0 1024 1024"
                       data-role="accordion-icon"
                       class="accordion-icon2"
                     >
                       <path
                         d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div
+                      ></path></svg></div
+                  ><div
                     data-role="accordion-container"
                     class="accordion-element2 accordion-element"
-                  >
-                    <div class="accordion-details2">
-                      <span class="accordion-text4 toggle-header clickable">
-                        <span>Budget-Friendly Recipe Generation</span>
-                      </span>
-                      <span
+                    ><div class="accordion-details2"
+                      ><span class="accordion-text4 toggle-header clickable"
+                        ><span>Budget-Friendly Recipe Generation</span></span
+                      ><span
                         data-role="accordion-content"
                         class="accordion-text5 toggle-content"
-                      >
-                        <span>
-                          OptiDeals takes savings to the next level by allowing
+                        ><span
+                          >OptiDeals takes savings to the next level by allowing
                           users to set their budget within the app. The AI then
                           curates a week’s worth of delicious recipes based on
                           the best flyer deals available, making it possible to
                           enjoy diverse and tasty meals without breaking the
-                          bank.
-                        </span>
-                      </span>
-                    </div>
-                    <svg
+                          bank.</span
+                        ></span
+                      ></div
+                    ><svg
                       viewBox="0 0 1024 1024"
                       data-role="accordion-icon"
                       class="accordion-icon4"
                     >
                       <path
                         d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="recipes" class="home-recipes">
-          <header class="home-header2">
-            <span class="home-section2 section-head">Recipes</span>
-            <h2 class="home-heading3 section-heading">RECIPES OF THE WEEK</h2>
-          </header>
-          <iframe
+                      ></path></svg></div></div></div></div></div></section
+        ><section id="recipes" class="home-recipes"
+          ><header class="home-header2"
+            ><span class="home-section2 section-head">Recipes</span
+            ><h2 class="home-heading3 section-heading"
+              >RECIPES OF THE WEEK</h2
+            ></header
+          ><iframe
             src="https://optideals.github.io/OptiDeals-Grid/"
             class="home-iframe"
-          ></iframe>
-        </section>
-        <section class="home-faq">
-          <header class="home-header3">
-            <span class="home-section3 section-head">FAQ</span>
-            <h2 class="home-heading4 section-heading">
-              Frequently asked questions
-            </h2>
-          </header>
-          <main class="home-accordion">
-            <div class="faq-accordion faq-root-class-name">
-              <div
+          ></iframe></section
+        ><section class="home-faq"
+          ><header class="home-header3"
+            ><span class="home-section3 section-head">FAQ</span
+            ><h2 class="home-heading4 section-heading"
+              >Frequently asked questions</h2
+            ></header
+          ><main class="home-accordion"
+            ><div class="faq-accordion faq-root-class-name"
+              ><div
                 data-role="accordion-container"
                 class="faq-element accordion-element"
-              >
-                <div class="faq-details">
-                  <span class="faq-text clickable toggle-header">
-                    Is OptiDeals planning to use LLM or Llama AI for training
-                    recipes and data based on grocery store sales?
-                  </span>
-                  <span
+                ><div class="faq-details"
+                  ><span class="faq-text toggle-header clickable"
+                    >Is OptiDeals planning to use LLM or Llama AI for training
+                    recipes and data based on grocery store sales?</span
+                  ><span
                     data-role="accordion-content"
                     class="faq-text1 toggle-content"
-                  >
-                    Yes, OptiDeals is always looking for ways to improve and
+                    >Yes, OptiDeals is always looking for ways to improve and
                     provide the best service to our users. We are exploring the
                     possibility of transitioning to a LLM (Language Model) or
                     Llama AI. This advanced AI technology would allow us to
@@ -405,218 +357,93 @@
                     stores, further enhancing the personalization and accuracy
                     of our meal plans. Stay tuned for updates on this exciting
                     development!
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon">
+                  </span></div
+                ><div data-role="accordion-icon"
+                  ><svg viewBox="0 0 1024 1024" class="faq-icon">
                     <path
                       d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div
+                    ></path></svg></div></div
+              ><div
                 data-role="accordion-container"
                 class="faq-element1 accordion-element"
-              >
-                <div class="faq-details1">
-                  <span class="faq-text2 clickable toggle-header">
-                    How does OptiDeals generate meal plans based on flyer deals?
-                  </span>
-                  <span
+                ><div class="faq-details1"
+                  ><span class="faq-text2 toggle-header clickable"
+                    >How does OptiDeals generate meal plans based on flyer
+                    deals?</span
+                  ><span
                     data-role="accordion-content"
                     class="faq-text3 toggle-content"
-                  >
-                    OptiDeals uses advanced algorithms to scan real-time flyer
+                    >OptiDeals uses advanced algorithms to scan real-time flyer
                     deals from nearby Ontario grocers. It then generates
                     personalized meal plans based on these deals and your
                     preferences.
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon2">
+                  </span></div
+                ><div data-role="accordion-icon"
+                  ><svg viewBox="0 0 1024 1024" class="faq-icon2">
                     <path
                       d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div
+                    ></path></svg></div></div
+              ><div
                 data-role="accordion-container"
                 class="faq-element2 accordion-element"
-              >
-                <div class="faq-details2">
-                  <span class="faq-text4 toggle-header clickable">
-                    Can I set a budget for my meals in OptiDeals?
-                  </span>
-                  <span
+                ><div class="faq-details2"
+                  ><span class="faq-text4 toggle-header clickable"
+                    >Can I set a budget for my meals in OptiDeals?</span
+                  ><span
                     data-role="accordion-content"
                     class="faq-text5 toggle-content"
-                  >
-                    Yes, OptiDeals allows you to set a budget for your meals.
+                    >Yes, OptiDeals allows you to set a budget for your meals.
                     The app will then generate a week’s worth of recipes that
                     fit within your budget, using the best available flyer
                     deals.
-                  </span>
-                </div>
-                <div data-role="accordion-icon">
-                  <svg viewBox="0 0 1024 1024" class="faq-icon4">
+                  </span></div
+                ><div data-role="accordion-icon"
+                  ><svg viewBox="0 0 1024 1024" class="faq-icon4">
                     <path
                       d="M366 708l196-196-196-196 60-60 256 256-256 256z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </main>
-        </section>
-        <footer class="home-footer">
-          <div class="home-content2">
-            <main class="home-main-content">
-              <div class="home-content3">
-                <header class="home-main1">
-                  <div class="home-header4">
-                    <img
+                    ></path></svg></div></div></div></main></section
+        ><footer class="home-footer"
+          ><div class="home-content2"
+            ><main class="home-main-content"
+              ><div class="home-content3"
+                ><header class="home-main1"
+                  ><div class="home-header4"
+                    ><img
                       alt="image"
                       src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
                       class="home-branding"
-                    />
-                    <span class="home-text4">
-                      Revolutionizing recipes&nbsp;
-                    </span>
-                  </div>
-                  <div class="home-socials">
-                    <a
-                      href="https://linkedin.com"
+                    /><span class="home-text4"
+                      >Revolutionizing recipes&nbsp;</span
+                    ></div
+                  ><div class="home-socials"
+                    ><a
+                      href="https://github.com/orgs/OptiDeals/repositories"
                       target="_blank"
                       rel="noreferrer noopener"
                       class="home-link2"
-                    >
-                      <img
-                        alt="image"
-                        src="public/Icons/linkedin-200h.png"
-                        class="social"
-                      />
-                    </a>
-                    <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="home-link3"
-                    >
-                      <img
-                        alt="image"
-                        src="public/Icons/instagram-200h.png"
-                        class="social"
-                      />
-                    </a>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      class="home-link4"
-                    >
-                      <img
-                        alt="image"
-                        src="public/Icons/twitter-200h.png"
-                        class="social"
-                      />
-                    </a>
-                  </div>
-                </header>
-              </div>
-              <section class="home-copyright">
-                <span class="home-text5">© 2024 OptiDeals Inc.</span>
-              </section>
-            </main>
-            <main class="home-subscribe"></main>
-            <section class="home-copyright1">
-              <span class="home-text6">© 2024 OptiDeals Inc.</span>
-            </section>
-          </div>
-        </footer>
-        <div>
-          <div class="home-container2">
-            <script>
-                  /*
-              Accordion - Code Embed
-              */
-
-              /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
-              the Accordions will still work*/
-
-              const listenForUrlChangesAccordion = () => {
-                    let url = location.href;
-                    document.body.addEventListener(
-                      'click',
-                      () => {
-                        requestAnimationFrame(() => {
-                          if (url !== location.href) {
-                            runAccordionCodeEmbed();
-                            url = location.href;
-                          }
-                        });
-                      },
-                      true
-                    );
-                  };
-
-
-              const runAccordionCodeEmbed = () => {
-                  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
-                  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
-                  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
-
-                  accordionContents.forEach((accordionContent) => {
-                      accordionContent.style.display = 'none'; //Hides all accordion contents
-                  });
-
-                  accordionContainers.forEach((accordionContainer, index) => {
-                      accordionContainer.addEventListener('click', () => {
-                          accordionContents.forEach((accordionContent) => {
-                          accordionContent.style.display = 'none'; //Hides all accordion contents
-                          });
-
-                          accordionIcons.forEach((accordionIcon) => {
-                              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
-                          });
-
-                          accordionContents[index].style.display = 'flex'; // Shows accordion content
-                          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
-                      });
-                  });
-              }
-
-              runAccordionCodeEmbed()
-              listenForUrlChangesAccordion()
-
-              /*
-              Here's what the above is doing:
-                  1. Selects all accordion containers, contents, and icons
-                  2. Hides all accordion contents
-                  3. Adds an event listener to each accordion container
-                  4. When an accordion container is clicked, it:
-                      - Hides all accordion contents
-                      - Resets all icon transforms to 0deg (default)
-                      - Checks if this container has class 'accordion-open'
-                          - If it does, it removes class 'accordion-open'
-                          - If it doesn't, it:
-                              - Removes class 'accordion-open' from all containers
-                              - Adds class 'accordion-open' to this container
-                              - Shows accordion content
-                              - Rotates accordion icon 180deg
-              */
-            </script>
-          </div>
-        </div>
-      </div>
-    </div>
+                      ><svg
+                        viewBox="0 0 877.7142857142857 1024"
+                        class="home-icon"
+                      >
+                        <path
+                          d="M296.571 685.714v0c1.143-1.714 0.571-5.143-1.714-7.429-2.857-2.286-6.286-2.857-8-1.143-1.143 1.714-0.571 5.143 1.714 7.429 2.857 2.286 6.286 2.857 8 1.143zM280.571 662.286c-1.714-2.286-4.571-3.429-6.857-2.286-1.714 1.143-1.714 4.571 0 6.857 2.286 2.857 5.143 4 6.857 2.857v0c1.714-1.143 1.714-4.571 0-7.429zM257.143 639.429v0c0.571-1.143-0.571-3.429-2.857-4.571-1.714-0.571-4-0.571-4.571 1.143-1.143 1.714 0 3.429 2.286 4.571 2.286 0.571 4.571 0.571 5.143-1.143zM269.143 652.571v0c1.143-1.143 1.143-4-1.143-5.714-1.714-2.286-4.571-2.857-5.714-1.714-1.714 1.714-1.143 4 0.571 6.286 1.714 1.714 4.571 2.857 6.286 1.143zM318.286 695.429v0c0.571-2.286-1.714-5.143-5.143-6.286s-6.286 0-7.429 2.286c-0.571 2.286 1.714 5.143 5.143 6.286s6.286 0 7.429-2.286zM342.286 697.143v0c0-2.286-2.857-4.571-6.857-4.571-3.429 0-5.714 2.286-5.714 4.571s2.857 4.571 6.286 4.571 6.286-2.286 6.286-4.571zM364.571 693.143v0c-0.571-2.286-4-3.429-7.429-2.857s-5.714 2.857-5.143 5.143 3.429 4 6.857 3.429 5.714-3.429 5.714-5.714zM731.429 512c0-161.714-130.857-292.571-292.571-292.571s-292.571 130.857-292.571 292.571c0 129.143 84 238.857 200 277.714 14.857 2.857 20-6.286 20-14.286 0-6.857 0-29.714-0.571-54.286 0 0-81.143 17.714-98.286-34.857 0 0-13.143-33.714-32.571-42.286 0 0-26.286-18.286 2.286-18.286 0 0 28.571 2.286 44.571 30.286 25.714 45.143 68.571 32 85.143 24.571 2.857-18.857 10.286-32 18.857-39.429-65.143-7.429-133.714-32.571-133.714-144.571 0-32 11.429-57.714 30.286-78.286-2.857-7.429-13.143-37.143 2.857-77.714 24.571-7.429 80.571 30.286 80.571 30.286 23.429-6.857 48-9.714 73.143-9.714s49.714 2.857 73.143 9.714c0 0 56-37.714 80.571-30.286 16 40.571 5.714 70.286 2.857 77.714 18.857 20.571 30.286 46.286 30.286 78.286 0 112.571-68.571 137.143-133.714 144.571 10.286 9.143 20 26.857 20 54.286 0 38.857-0.571 70.286-0.571 80 0 8 5.143 17.143 20 14.286 116-38.857 200-148.571 200-277.714zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                        ></path></svg></a></div></header></div
+              ><section class="home-copyright"
+                ><span class="home-text5">© 2024 OptiDeals Inc.</span></section
+              ></main
+            ><main class="home-subscribe"></main
+            ><section class="home-copyright1"
+              ><span class="home-text6">© 2024 OptiDeals Inc.</span></section
+            ></div
+          ></footer
+        ></div
+      ></div
+    >
     <script>
       window.__ow = window.__ow || {};
       window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
-      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
-    </script>
-    <script>
+      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))</script
+    ><script>
       window.onload = function() {
           var headers = document.getElementsByClassName('toggle-header');
           for (var i = 0; i < headers.length; i++) {
@@ -629,7 +456,19 @@
                   }
               });
           }
-      }
-    </script>
-  </body>
-</html>
+      }</script
+    ><script>
+      window.onload = function() {
+          var buttons = document.getElementsByClassName('menuCloser');
+          for(var i = 0; i < buttons.length; i++){
+              buttons[i].addEventListener('click', function() {
+                  var elements = document.getElementsByClassName('closeMenu');
+                  for(var j = 0; j < elements.length; j++){
+                      elements[j].style.display = 'none';
+                  }
+              });
+          }
+      };
+    </script></body
+  ></html
+>
