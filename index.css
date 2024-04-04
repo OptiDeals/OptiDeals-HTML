@@ -161,6 +161,9 @@
     width: var(--dl-size-size-small);
     height: 100%;
   }
+  .app-component-mobile-menu {
+    display: none;
+  }
   .app-component-branding {
     width: 100%;
   }

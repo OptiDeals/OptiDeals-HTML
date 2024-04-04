@@ -83,7 +83,7 @@
 .nav-link:hover {
   opacity: 0.5;
 }
-.get-started {
+.ham {
   cursor: pointer;
   display: flex;
   transition: 0.3s;
@@ -98,7 +98,7 @@
   text-decoration: none;
   background-color: rgba(42, 42, 42, 1);
 }
-.get-started:hover {
+.ham:hover {
   opacity: 0.5;
 }
 .avatar {

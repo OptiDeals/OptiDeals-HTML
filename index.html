@@ -108,17 +108,17 @@
                   ><span>Contact</span></span
                 ></div
               ><a href="#recipes" class="app-component-link4"
-                ><div class="app-component-get-started clickable get-started"
+                ><div class="app-component-get-started clickable ham"
                   ><span class="app-component-text"
                     ><span>Get started</span></span
                   ></div
                 ></a
-              ><div id="open-mobile-menu" class="get-started menuOpener"
+              ><div id="open-mobile-menu" class="ham menuOpener"
                 ><img
                   alt="image"
                   src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
                   class="app-component-image" /></div></div
-            ><div id="mobile-menu" class="closeMenu showMenu"
+            ><div id="mobile-menu" class="showMenu app-component-mobile-menu"
               ><div class="app-component-branding"
                 ><img
                   alt="image"
@@ -150,7 +150,7 @@
                   class="menuCloser clickable contact nav-link"
                   ><span>Contact</span></span
                 ></div
-              ><div class="get-started"
+              ><div class="ham"
                 ><a
                   href="#recipes"
                   class="app-component-text1 menuCloser clickable"
@@ -472,31 +472,7 @@
                   }
               });
           }
-      }</script
-    ><script>
-      window.onload = function() {
-          var buttons = document.getElementsByClassName('menuCloser');
-          for(var i = 0; i < buttons.length; i++){
-              buttons[i].addEventListener('click', function() {
-                  var elements = document.getElementsByClassName('closeMenu');
-                  for(var j = 0; j < elements.length; j++){
-                      elements[j].style.display = 'none';
-                  }
-              });
-          }
-      };</script
-    ><script>
-      window.onload = function() {
-          var buttons = document.getElementsByClassName('menuOpener');
-          for(var i = 0; i < buttons.length; i++){
-              buttons[i].addEventListener('click', function() {
-                  var elements = document.getElementsByClassName('showMenu');
-                  for(var j = 0; j < elements.length; j++){
-                      elements[j].style.display = 'block';
-                  }
-              });
-          }
-      };
+      }
     </script></body
   ></html
 >
