@@ -803,6 +803,9 @@
   line-height: 21px;
 }
 @media(max-width: 991px) {
+  .home-navbar-interactive {
+    width: 100%;
+  }
   .home-section {
     height: auto;
     padding-top: 150px;
