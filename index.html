@@ -81,132 +81,45 @@
   ><body
     ><link rel="stylesheet" href="./style.css" /><div
       ><link href="./index.css" rel="stylesheet" /><div class="home-container"
-        ><div class="app-component-container"
-          ><header id="header" class="app-component-navbar"
+        ><header data-thq="thq-navbar" class="home-navbar-interactive"
+          ><img
+            alt="logo"
+            src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
+            class="home-image"
+          /><div data-thq="thq-navbar-nav" class="home-desktop-menu"
+            ><nav class="home-links"
+              ><span class="home-text"><span>Recipes</span><br /></span
+              ><span class="home-text03">Features</span
+              ><span class="home-text04">FAQ</span
+              ><span class="home-text05">GitHub</span></nav
+            ></div
+          ><div data-thq="thq-burger-menu" class="home-burger-menu"
             ><img
-              src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
-              class="app-component-branding-logo"
-            /><div class="app-component-nav-content"
-              ><div class="app-component-nav-links"
-                ><a
-                  href="#recipes"
-                  class="app-component-link clickable nav-link"
-                  ><span>Recipes</span></a
-                ><a
-                  href="#features"
-                  class="app-component-link1 clickable nav-link"
-                  ><span>Features</span></a
-                ><a
-                  href="https://github.com/orgs/OptiDeals/repositories"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="app-component-link2 clickable nav-link"
-                  ><span>GitHub</span></a
-                ><span
-                  data-openwidget-action="maximize"
-                  class="clickable contact nav-link"
-                  ><span>Contact</span></span
-                ></div
-              ><a href="#recipes" class="app-component-link4"
-                ><div class="app-component-get-started clickable ham"
-                  ><span class="app-component-text"
-                    ><span>Get started</span></span
-                  ></div
-                ></a
-              ><div id="open-mobile-menu" class="ham menuOpener"
+              alt="image"
+              src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
+              class="home-image1" /></div
+          ><div data-thq="thq-mobile-menu" class="home-mobile-menu"
+            ><div class="home-nav"
+              ><div class="home-top"
                 ><img
                   alt="image"
-                  src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
-                  class="app-component-image" /></div></div
-            ><div id="mobile-menu" class="showMenu app-component-mobile-menu"
-              ><div class="app-component-branding"
-                ><img
-                  alt="image"
-                  src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsLogoCropped.png"
-                  class="app-component-image1" /><div
-                  id="close-mobile-menu"
-                  class="app-component-container1"
-                  ><svg viewBox="0 0 1024 1024" class="app-component-icon">
+                  src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
+                  class="home-logo" /><div
+                  data-thq="thq-close-menu"
+                  class="home-close-menu"
+                  ><svg viewBox="0 0 1024 1024" class="home-icon">
                     <path
-                      d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
                     ></path></svg></div></div
-              ><div class="app-component-nav-links1"
-                ><a
-                  href="#recipes"
-                  class="app-component-link5 menuCloser nav-link"
-                  ><span>Recipes</span></a
-                ><a
-                  href="#features"
-                  class="app-component-link6 menuCloser nav-link"
-                  ><span>Features</span></a
-                ><a
-                  href="https://github.com/orgs/OptiDeals/repositories"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="app-component-link7 menuCloser nav-link"
-                  ><span>GitHub</span></a
-                ><span
-                  data-openwidget-action="maximize"
-                  class="menuCloser clickable contact nav-link"
-                  ><span>Contact</span></span
-                ></div
-              ><div class="ham"
-                ><a
-                  href="#recipes"
-                  class="app-component-text1 menuCloser clickable"
-                  ><span>Get started</span></a
-                ></div
+              ><nav class="home-links1"
+                ><span class="home-text06">Recipes</span
+                ><span class="home-text07">Features</span
+                ><span class="home-text08">FAQ</span
+                ><span class="home-text09">GitHub</span
+                ><span class="home-text10">Blog</span></nav
               ></div
-            ><div
-              ><div class="app-component-container3"
-                ><script defer="">
-                      /*
-                  Mobile menu - Code Embed
-                  */
-
-                  /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
-                  the mobile menu will still work*/
-
-                  const listenForUrlChangesMobileMenu = () => {
-                      let url = location.href;
-                      document.body.addEventListener('click', () => {
-                          requestAnimationFrame(() => {
-                              if (url !== location.href) {
-                                  runMobileMenuCodeEmbed();
-                                  url = location.href;
-                              }
-                          });
-                      },
-                      true
-                      );
-                  };
-
-                  const runMobileMenuCodeEmbed = () => {
-                      // Mobile menu
-                      const mobileMenu = document.querySelector('#mobile-menu')
-
-                      // Buttons
-                      const closeButton = document.querySelector('#close-mobile-menu')
-                      const openButton = document.querySelector('#open-mobile-menu')
-
-                      // On openButton click, set the mobileMenu position left to -100vw
-                      openButton && openButton.addEventListener('click', function() {
-                          mobileMenu.style.transform = 'translateX(0%)'
-                      })
-
-                      // On closeButton click, set the mobileMenu position to 0vw
-                      closeButton && closeButton.addEventListener('click', function() {
-                          mobileMenu.style.transform = 'translateX(100%)'
-                      })
-                  }
-
-                  runMobileMenuCodeEmbed()
-                  listenForUrlChangesMobileMenu()
-                </script></div
-              ></div
-            ></header
-          ><header class="app-component-background"></header
-          ><header class="app-component-seperator"></header></div
+            ></div
+          ></header
         ><section class="home-section"
           ><div class="home-hero"
             ><div class="home-content"
@@ -220,11 +133,11 @@
                 ><div class="home-buttons"
                   ><a href="#recipes" class="home-link"
                     ><div class="home-get-started button"
-                      ><span class="home-text">Get started</span></div
+                      ><span class="home-text11">Get started</span></div
                     ></a
                   ><a href="#features" class="home-link1"
                     ><div class="home-get-started1 button"
-                      ><span class="home-text1">View features</span></div
+                      ><span class="home-text12">View features</span></div
                     ></a
                   ></div
                 ></main
@@ -233,13 +146,13 @@
                   ><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image avatar" /><img
+                    class="home-image2 avatar" /><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image1 avatar" /><img
+                    class="home-image3 avatar" /><img
                     alt="image"
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ3fHxwZXJzb258ZW58MHx8fHwxNzExNjQwMTk5fDA&amp;ixlib=rb-4.0.3&amp;w=200"
-                    class="home-image2 avatar" /></div
+                    class="home-image4 avatar" /></div
                 ><label class="home-caption1"
                   >Loved by 1,000+ people like you.</label
                 ></div
@@ -248,11 +161,11 @@
           ></section
         ><section id="features" class="home-features"
           ><div class="home-note"
-            ><div class="home-image3"
+            ><div class="home-image5"
               ><img
                 alt="image"
                 src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/grocerybasket.png"
-                class="home-image4" /></div
+                class="home-image6" /></div
             ><div class="home-content1"
               ><div class="home-caption2"
                 ><span class="home-section1 section-head">Optideals</span></div
@@ -428,7 +341,7 @@
                       alt="image"
                       src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
                       class="home-branding"
-                    /><span class="home-text4"
+                    /><span class="home-text15"
                       >Revolutionizing recipes&nbsp;</span
                     ></div
                   ><div class="home-socials"
@@ -439,17 +352,17 @@
                       class="home-link2"
                       ><svg
                         viewBox="0 0 877.7142857142857 1024"
-                        class="home-icon"
+                        class="home-icon2"
                       >
                         <path
                           d="M296.571 685.714v0c1.143-1.714 0.571-5.143-1.714-7.429-2.857-2.286-6.286-2.857-8-1.143-1.143 1.714-0.571 5.143 1.714 7.429 2.857 2.286 6.286 2.857 8 1.143zM280.571 662.286c-1.714-2.286-4.571-3.429-6.857-2.286-1.714 1.143-1.714 4.571 0 6.857 2.286 2.857 5.143 4 6.857 2.857v0c1.714-1.143 1.714-4.571 0-7.429zM257.143 639.429v0c0.571-1.143-0.571-3.429-2.857-4.571-1.714-0.571-4-0.571-4.571 1.143-1.143 1.714 0 3.429 2.286 4.571 2.286 0.571 4.571 0.571 5.143-1.143zM269.143 652.571v0c1.143-1.143 1.143-4-1.143-5.714-1.714-2.286-4.571-2.857-5.714-1.714-1.714 1.714-1.143 4 0.571 6.286 1.714 1.714 4.571 2.857 6.286 1.143zM318.286 695.429v0c0.571-2.286-1.714-5.143-5.143-6.286s-6.286 0-7.429 2.286c-0.571 2.286 1.714 5.143 5.143 6.286s6.286 0 7.429-2.286zM342.286 697.143v0c0-2.286-2.857-4.571-6.857-4.571-3.429 0-5.714 2.286-5.714 4.571s2.857 4.571 6.286 4.571 6.286-2.286 6.286-4.571zM364.571 693.143v0c-0.571-2.286-4-3.429-7.429-2.857s-5.714 2.857-5.143 5.143 3.429 4 6.857 3.429 5.714-3.429 5.714-5.714zM731.429 512c0-161.714-130.857-292.571-292.571-292.571s-292.571 130.857-292.571 292.571c0 129.143 84 238.857 200 277.714 14.857 2.857 20-6.286 20-14.286 0-6.857 0-29.714-0.571-54.286 0 0-81.143 17.714-98.286-34.857 0 0-13.143-33.714-32.571-42.286 0 0-26.286-18.286 2.286-18.286 0 0 28.571 2.286 44.571 30.286 25.714 45.143 68.571 32 85.143 24.571 2.857-18.857 10.286-32 18.857-39.429-65.143-7.429-133.714-32.571-133.714-144.571 0-32 11.429-57.714 30.286-78.286-2.857-7.429-13.143-37.143 2.857-77.714 24.571-7.429 80.571 30.286 80.571 30.286 23.429-6.857 48-9.714 73.143-9.714s49.714 2.857 73.143 9.714c0 0 56-37.714 80.571-30.286 16 40.571 5.714 70.286 2.857 77.714 18.857 20.571 30.286 46.286 30.286 78.286 0 112.571-68.571 137.143-133.714 144.571 10.286 9.143 20 26.857 20 54.286 0 38.857-0.571 70.286-0.571 80 0 8 5.143 17.143 20 14.286 116-38.857 200-148.571 200-277.714zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
                         ></path></svg></a></div></header></div
               ><section class="home-copyright"
-                ><span class="home-text5">© 2024 OptiDeals Inc.</span></section
+                ><span class="home-text16">© 2024 OptiDeals Inc.</span></section
               ></main
             ><main class="home-subscribe"></main
             ><section class="home-copyright1"
-              ><span class="home-text6">© 2024 OptiDeals Inc.</span></section
+              ><span class="home-text17">© 2024 OptiDeals Inc.</span></section
             ></div
           ></footer
         ></div
@@ -472,7 +385,9 @@
                   }
               });
           }
-      }
-    </script></body
-  ></html
->
+      }</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>
