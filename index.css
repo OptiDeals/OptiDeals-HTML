@@ -86,7 +86,6 @@
 }
 .navbar-image1 {
   width: 100px;
-  filter: brightness(0) saturate(100%);
   object-fit: cover;
 }
 .navbar-container {
@@ -885,7 +884,7 @@
     flex-direction: column;
   }
   .home-features {
-    padding-top: 0px;
+    padding-top: var(--dl-space-space-fourunits);
   }
   .home-note {
     flex-direction: column-reverse;
@@ -954,6 +953,9 @@
   .home-caption1 {
     font-size: 14px;
     line-height: 21px;
+  }
+  .home-note {
+    padding-top: var(--dl-space-space-threeunits);
   }
   .home-content1 {
     width: 100%;
