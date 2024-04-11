@@ -114,6 +114,7 @@
   height: var(--dl-size-size-xsmall);
 }
 
+
 @media(max-width: 767px) {
   .accordion-element {
     width: 100%;

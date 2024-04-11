@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Capstone-Project - OptiDeals</title
+    ><meta
+      name="description"
+      content="Customize your weekly meals based on real-time flyer deals and prices from nearby Ontario grocers. Our app, powered by OpenAI, streamlines the process, saving you time and money."
+    /><meta property="og:title" content="Capstone-Project - OptiDeals" /><meta
+      property="og:description"
+      content="Customize your weekly meals based on real-time flyer deals and prices from nearby Ontario grocers. Our app, powered by OpenAI, streamlines the process, saving you time and money."
+    /><meta
+      property="og:image"
+      content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/2b5cfbdd-632e-4c5b-bbc0-4a3b524b4a61/5cd39434-b305-48b3-8f46-05aedcb42f04?org_if_sml=1&amp;force_format=original"
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    /><style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style
+    ><style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }</style
+    ><link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    /><link
+      rel="shortcut icon"
+      href="public/optidealslogocropped.png"
+      type="icon/png"
+      sizes="32x32"
+    /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    /><link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    /><style>
+      .toggle-content {
+          display: none;
+      }
+    </style>
+    <style>
+      .toggle-header {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .clickable {
+          cursor: pointer;
+      }
+    </style>
+    <style>
+      .unselectable {
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style></head
+  ><body
+    ><link rel="stylesheet" href="./style.css" /><div
+      ><link href="./capstone-project.css" rel="stylesheet" /><div
+        class="capstone-project-container"
+        ><header
+          data-thq="thq-navbar"
+          class="capstone-project-navbar-interactive"
+          ><img
+            alt="logo"
+            src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
+            class="capstone-project-image"
+          /><div data-thq="thq-navbar-nav" class="capstone-project-desktop-menu"
+            ><nav class="capstone-project-links"
+              ><a
+                href="#recipes"
+                class="capstone-project-link clickable nav-link"
+                ><span>Recipes</span><br /></a
+              ><span class="capstone-project-text02 clickable nav-link"
+                >Features</span
+              ><span class="capstone-project-text03 clickable nav-link"
+                >FAQ</span
+              ><a
+                href="capstone-project.html"
+                class="capstone-project-navlink clickable nav-link"
+                >Capstone</a
+              ><a
+                href="https://github.com/orgs/OptiDeals/repositories"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="capstone-project-link1 clickable nav-link"
+                >GitHub</a
+              ><span
+                data-openwidget-action="maximize"
+                class="capstone-project-text04 clickable nav-link"
+                >Contact</span
+              ></nav
+            ></div
+          ><div data-thq="thq-burger-menu" class="capstone-project-burger-menu"
+            ><img
+              alt="image"
+              src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/hamburger.png"
+              class="capstone-project-image1" /></div
+          ><div data-thq="thq-mobile-menu" class="capstone-project-mobile-menu"
+            ><div class="capstone-project-nav"
+              ><div class="capstone-project-top"
+                ><img
+                  alt="image"
+                  src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
+                  class="capstone-project-logo" /><div
+                  data-thq="thq-close-menu"
+                  class="capstone-project-close-menu"
+                  ><svg viewBox="0 0 1024 1024" class="capstone-project-icon">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path></svg></div></div
+              ><nav class="capstone-project-links1"
+                ><a href="#recipes" class="capstone-project-link2">Recipes</a
+                ><span class="capstone-project-text05">Features</span
+                ><span class="capstone-project-text06">FAQ</span
+                ><a
+                  href="https://github.com/orgs/OptiDeals/repositories"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="capstone-project-link3"
+                  >GitHub</a
+                ><span
+                  data-openwidget-action="maximize"
+                  class="capstone-project-text07"
+                  >Contact</span
+                ></nav
+              ></div
+            ></div
+          ></header
+        ><section class="capstone-project-section"
+          ><div class="capstone-project-hero"
+            ><div class="capstone-project-content"
+              ><main class="capstone-project-main"
+                ><header class="capstone-project-header"
+                  ><h1 class="capstone-project-heading"
+                    >Discover the Best Deals with OptiDeals</h1
+                  ><span class="capstone-project-caption"
+                    >Where Savings Meet Satisfaction!</span
+                  ></header
+                ><div class="capstone-project-buttons"
+                  ><a href="#recipes" class="capstone-project-link4"
+                    ><div class="capstone-project-get-started button"
+                      ><span class="capstone-project-text08"
+                        >Get started</span
+                      ></div
+                    ></a
+                  ><div class="capstone-project-get-started1 button"
+                    ><span class="capstone-project-text09"
+                      >View features</span
+                    ></div
+                  ></div
+                ></main
+              ><div class="capstone-project-highlight"
+                ><div class="capstone-project-avatars"
+                  ><img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
+                    class="capstone-project-image2 avatar" /><img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fHBlcnNvbnxlbnwwfHx8fDE3MTE2Mzk4NTF8MA&amp;ixlib=rb-4.0.3&amp;w=200"
+                    class="capstone-project-image3 avatar" /><img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDQ3fHxwZXJzb258ZW58MHx8fHwxNzExNjQwMTk5fDA&amp;ixlib=rb-4.0.3&amp;w=200"
+                    class="capstone-project-image4 avatar" /></div
+                ><label class="capstone-project-caption1"
+                  >Loved by 1,000+ people like you.</label
+                ></div
+              ></div
+            ></div
+          ></section
+        ><section id="recipes" class="capstone-project-recipes"
+          ><header class="capstone-project-header1"
+            ><span class="capstone-project-section1 section-head"
+              >CAPSTONE PROJECT</span
+            ><h2 class="capstone-project-heading1 section-heading"
+              >CAPSTONE PROTOTYPE DEMONSTRATION</h2
+            ></header
+          ><iframe
+            src="https://www.youtube.com/watch?v=I6pZHfypR7o"
+            class="capstone-project-iframe"
+          ></iframe></section
+        ><footer class="capstone-project-footer"
+          ><div class="capstone-project-content1"
+            ><main class="capstone-project-main-content"
+              ><div class="capstone-project-content2"
+                ><header class="capstone-project-main1"
+                  ><div class="capstone-project-header2"
+                    ><img
+                      alt="image"
+                      src="https://raw.githubusercontent.com/OptiDeals/OptiDeals-HTML/main/data/photos/OptiDealsText.png"
+                      class="capstone-project-branding"
+                    /><span class="capstone-project-text10"
+                      >Revolutionizing recipes&nbsp;</span
+                    ></div
+                  ><div class="capstone-project-socials"
+                    ><a
+                      href="https://github.com/orgs/OptiDeals/repositories"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="capstone-project-link5"
+                      ><svg
+                        viewBox="0 0 877.7142857142857 1024"
+                        class="capstone-project-icon2"
+                      >
+                        <path
+                          d="M296.571 685.714v0c1.143-1.714 0.571-5.143-1.714-7.429-2.857-2.286-6.286-2.857-8-1.143-1.143 1.714-0.571 5.143 1.714 7.429 2.857 2.286 6.286 2.857 8 1.143zM280.571 662.286c-1.714-2.286-4.571-3.429-6.857-2.286-1.714 1.143-1.714 4.571 0 6.857 2.286 2.857 5.143 4 6.857 2.857v0c1.714-1.143 1.714-4.571 0-7.429zM257.143 639.429v0c0.571-1.143-0.571-3.429-2.857-4.571-1.714-0.571-4-0.571-4.571 1.143-1.143 1.714 0 3.429 2.286 4.571 2.286 0.571 4.571 0.571 5.143-1.143zM269.143 652.571v0c1.143-1.143 1.143-4-1.143-5.714-1.714-2.286-4.571-2.857-5.714-1.714-1.714 1.714-1.143 4 0.571 6.286 1.714 1.714 4.571 2.857 6.286 1.143zM318.286 695.429v0c0.571-2.286-1.714-5.143-5.143-6.286s-6.286 0-7.429 2.286c-0.571 2.286 1.714 5.143 5.143 6.286s6.286 0 7.429-2.286zM342.286 697.143v0c0-2.286-2.857-4.571-6.857-4.571-3.429 0-5.714 2.286-5.714 4.571s2.857 4.571 6.286 4.571 6.286-2.286 6.286-4.571zM364.571 693.143v0c-0.571-2.286-4-3.429-7.429-2.857s-5.714 2.857-5.143 5.143 3.429 4 6.857 3.429 5.714-3.429 5.714-5.714zM731.429 512c0-161.714-130.857-292.571-292.571-292.571s-292.571 130.857-292.571 292.571c0 129.143 84 238.857 200 277.714 14.857 2.857 20-6.286 20-14.286 0-6.857 0-29.714-0.571-54.286 0 0-81.143 17.714-98.286-34.857 0 0-13.143-33.714-32.571-42.286 0 0-26.286-18.286 2.286-18.286 0 0 28.571 2.286 44.571 30.286 25.714 45.143 68.571 32 85.143 24.571 2.857-18.857 10.286-32 18.857-39.429-65.143-7.429-133.714-32.571-133.714-144.571 0-32 11.429-57.714 30.286-78.286-2.857-7.429-13.143-37.143 2.857-77.714 24.571-7.429 80.571 30.286 80.571 30.286 23.429-6.857 48-9.714 73.143-9.714s49.714 2.857 73.143 9.714c0 0 56-37.714 80.571-30.286 16 40.571 5.714 70.286 2.857 77.714 18.857 20.571 30.286 46.286 30.286 78.286 0 112.571-68.571 137.143-133.714 144.571 10.286 9.143 20 26.857 20 54.286 0 38.857-0.571 70.286-0.571 80 0 8 5.143 17.143 20 14.286 116-38.857 200-148.571 200-277.714zM877.714 237.714v548.571c0 90.857-73.714 164.571-164.571 164.571h-548.571c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571c90.857 0 164.571 73.714 164.571 164.571z"
+                        ></path></svg></a></div></header></div
+              ><section class="capstone-project-copyright"
+                ><span class="capstone-project-text11"
+                  >© 2024 OptiDeals Inc.</span
+                ></section
+              ></main
+            ><main class="capstone-project-subscribe"></main
+            ><section class="capstone-project-copyright1"
+              ><span class="capstone-project-text12"
+                >© 2024 OptiDeals Inc.</span
+              ></section
+            ></div
+          ></footer
+        ></div
+      ></div
+    >
+    <script>
+      window.__ow = window.__ow || {};
+      window.__ow.organizationId = "9ab7fd75-aafe-4b15-a657-54190ca62fdb";
+      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))</script
+    ><script>
+      window.onload = function() {
+          var headers = document.getElementsByClassName('toggle-header');
+          for (var i = 0; i < headers.length; i++) {
+              headers[i].addEventListener('click', function() {
+                  var content = this.nextElementSibling;
+                  if (content.style.display === "none" || content.style.display === "") {
+                      content.style.display = "block";
+                  } else {
+                      content.style.display = "none";
+                  }
+              });
+          }
+      }</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>
