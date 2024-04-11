@@ -40,20 +40,6 @@
 }
 .capstone-project-link {
   color: var(--dl-color-gray-white);
-  text-decoration: none;
-}
-.capstone-project-text02 {
-  color: var(--dl-color-gray-white);
-  margin-left: var(--dl-space-space-twounits);
-  text-decoration: none;
-}
-.capstone-project-text03 {
-  color: var(--dl-color-gray-white);
-  margin-left: var(--dl-space-space-twounits);
-  text-decoration: none;
-}
-.capstone-project-navlink {
-  color: var(--dl-color-gray-white);
   margin-left: var(--dl-space-space-twounits);
   text-decoration: none;
 }
@@ -62,7 +48,7 @@
   margin-left: var(--dl-space-space-twounits);
   text-decoration: none;
 }
-.capstone-project-text04 {
+.capstone-project-text2 {
   color: var(--dl-color-gray-white);
   margin-left: var(--dl-space-space-twounits);
 }
@@ -118,23 +104,15 @@
   align-items: flex-start;
   flex-direction: column;
 }
+.capstone-project-navlink {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
 .capstone-project-link2 {
   margin-bottom: var(--dl-space-space-unit);
   text-decoration: none;
 }
-.capstone-project-text05 {
-  margin-bottom: var(--dl-space-space-unit);
-  text-decoration: none;
-}
-.capstone-project-text06 {
-  margin-bottom: var(--dl-space-space-unit);
-  text-decoration: none;
-}
-.capstone-project-link3 {
-  margin-bottom: var(--dl-space-space-unit);
-  text-decoration: none;
-}
-.capstone-project-text07 {
+.capstone-project-text3 {
   margin-bottom: var(--dl-space-space-unit);
 }
 .capstone-project-section {
@@ -196,7 +174,7 @@
   align-items: center;
   flex-direction: row;
 }
-.capstone-project-link4 {
+.capstone-project-link3 {
   display: contents;
 }
 .capstone-project-get-started {
@@ -204,7 +182,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-100);
 }
-.capstone-project-text08 {
+.capstone-project-text4 {
   color: #0C100C;
   font-size: 16px;
   font-style: normal;
@@ -216,7 +194,7 @@
   text-decoration: none;
   background-color: #2A2A2A;
 }
-.capstone-project-text09 {
+.capstone-project-text5 {
   color: #ffffff;
   font-size: 16px;
   font-style: normal;
@@ -344,7 +322,7 @@
   width: var(--dl-size-size-xlarge);
   object-fit: cover;
 }
-.capstone-project-text10 {
+.capstone-project-text6 {
   color: rgb(255, 255, 255);
   width: 100%;
   font-size: 14px;
@@ -360,7 +338,7 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-.capstone-project-link5 {
+.capstone-project-link4 {
   display: contents;
 }
 .capstone-project-icon2 {
@@ -377,7 +355,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.capstone-project-text11 {
+.capstone-project-text7 {
   color: rgb(196, 196, 196);
   width: 100%;
   font-size: 14px;
@@ -402,7 +380,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.capstone-project-text12 {
+.capstone-project-text8 {
   color: #C4C4C4;
   width: 100%;
   font-size: 14px;
@@ -472,7 +450,7 @@
   .capstone-project-copyright {
     display: none;
   }
-  .capstone-project-text11 {
+  .capstone-project-text7 {
     color: rgb(196, 196, 196);
     font-size: 14px;
     font-family: Poppins;
@@ -481,7 +459,7 @@
   .capstone-project-copyright1 {
     display: flex;
   }
-  .capstone-project-text12 {
+  .capstone-project-text8 {
     color: rgb(196, 196, 196);
     font-size: 14px;
     font-family: Poppins;
@@ -524,26 +502,17 @@
     width: var(--dl-size-size-medium);
     height: auto;
   }
+  .capstone-project-navlink {
+    color: var(--dl-color-gray-white);
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
   .capstone-project-link2 {
     color: var(--dl-color-gray-white);
-    margin-bottom: var(--dl-space-space-unit);
-  }
-  .capstone-project-text05 {
-    color: var(--dl-color-gray-white);
     margin-left: 0;
     margin-bottom: var(--dl-space-space-unit);
   }
-  .capstone-project-text06 {
-    color: var(--dl-color-gray-white);
-    margin-left: 0;
-    margin-bottom: var(--dl-space-space-unit);
-  }
-  .capstone-project-link3 {
-    color: var(--dl-color-gray-white);
-    margin-left: 0;
-    margin-bottom: var(--dl-space-space-unit);
-  }
-  .capstone-project-text07 {
+  .capstone-project-text3 {
     color: var(--dl-color-gray-white);
     margin-left: 0;
     margin-bottom: var(--dl-space-space-unit);
