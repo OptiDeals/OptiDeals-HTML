@@ -625,12 +625,12 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 60px;
   border-color: #51515A;
   padding-left: var(--dl-space-space-oneandhalfunits);
   padding-right: var(--dl-space-space-oneandhalfunits);
   flex-direction: column;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   justify-content: center;
   border-top-width: 1px;
 }
