@@ -670,6 +670,11 @@
   height: 750px;
   border-radius: var(--dl-radius-radius-radius8);
 }
+.essentials-iframe{
+  width: 1500px;
+  height: 200px;
+  border-radius: var(--dl-radius-radius-radius8);
+}
 .home-faq {
   gap: var(--dl-space-space-fiveunits);
   flex: 1;
