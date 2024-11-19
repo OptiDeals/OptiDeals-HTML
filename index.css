@@ -671,7 +671,12 @@
   border-radius: var(--dl-radius-radius-radius8);
 }
 .essentials-iframe{
-  width: 1500px;
+  width: 1000px;
+  height: 200px;
+  border-radius: var(--dl-radius-radius-radius8);
+}
+.geolocation-iframe{
+  width: 1000px;
   height: 200px;
   border-radius: var(--dl-radius-radius-radius8);
 }
