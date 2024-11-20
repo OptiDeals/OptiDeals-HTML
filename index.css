@@ -680,7 +680,7 @@
 
 .geolocation-iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border-radius: var(--dl-radius-radius-radius8);
     border: none;
     overflow: hidden;
