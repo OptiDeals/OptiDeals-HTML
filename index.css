@@ -671,24 +671,25 @@
   border-radius: var(--dl-radius-radius-radius8);
 }
 .essentials-iframe, .geolocation-iframe {
-  width: 100%;
-  height: auto;
-  border-radius: var(--dl-radius-radius-radius8);
+    width: 100%;
+    height: auto;
+    border-radius: var(--dl-radius-radius-radius8);
+    border: none;
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .essentials-iframe, .geolocation-iframe {
-    width: 600px;
-    height: auto;
-  }
+    .essentials-iframe, .geolocation-iframe {
+        width: 600px;
+    }
 }
 
 @media (min-width: 1024px) {
-  .essentials-iframe, .geolocation-iframe {
-    width: 1000px;
-    height: auto;
-  }
+    .essentials-iframe, .geolocation-iframe {
+        width: 1000px;
+    }
 }
+
 
 
 .home-faq {
