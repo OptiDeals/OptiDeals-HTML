@@ -24,3 +24,6 @@ OptiDeals takes your savings to the next level! Picture this – you want to whi
 Whether you're a savvy spender or simply aiming to make your dollars go further, OptiDeals ensures you not only get the best prices but also a diverse and tasty menu. From hearty dinners to quick lunches, the app tailors your meal plans to align with your financial goals. 
 
 OptiDeals isn't just an app; it's your personal financial chef, making it easy to eat well without breaking the bank. Transform your grocery shopping experience – OptiDeals, where savings meet satisfaction!
+
+
+<!-- Security scan triggered at 2025-09-02 05:27:20 -->
